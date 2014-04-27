@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		452F60E9190D1D5D00E4AF83 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452F60E8190D1D5D00E4AF83 /* Storyboard.storyboard */; };
+		452F60ED190D1DFE00E4AF83 /* ACPReminder.m in Sources */ = {isa = PBXBuildFile; fileRef = 452F60EC190D1DFE00E4AF83 /* ACPReminder.m */; };
+		452F60F3190D8A9500E4AF83 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 452F60F2190D8A9500E4AF83 /* README.md */; };
+		71606DE8C8164EF8860FAC5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63373C84E3F34BD48C0D146E /* Foundation.framework */; };
+		84B10179F38C470BA11F0B35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE80930C954B929164E252 /* main.m */; };
+		997F3EE81505499E9DA5F981 /* ACPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5FF7E684B94687A364EB30 /* ACPAppDelegate.m */; };
+		E01D8B47084342B095C96899 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEDB9EA4B424D5D85B04E0A /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A3842D9A98A4F37924ECF6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 116C48D9B01E470ABC947349 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A5ECD0F8E744EDDB1F9E75B;
+			remoteInfo = ACPReminderExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A44B18288B94C3E9B418AB7 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		139BB708B8C043BDAEEB265A /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		18CE80930C954B929164E252 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		452F60E8190D1D5D00E4AF83 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		452F60EB190D1DFE00E4AF83 /* ACPReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPReminder.h; sourceTree = "<group>"; };
+		452F60EC190D1DFE00E4AF83 /* ACPReminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPReminder.m; sourceTree = "<group>"; };
+		452F60F2190D8A9500E4AF83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		63373C84E3F34BD48C0D146E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73FA3704AD6A4AC5A3EB7215 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		8031F446373A409E85179DF2 /* ACPAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ACPAppDelegate.h; sourceTree = "<group>"; };
+		846D58844E1642968A00C553 /* ACPReminderExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ACPReminderExample-Info.plist"; sourceTree = "<group>"; };
+		AAEDB9EA4B424D5D85B04E0A /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC5FF7E684B94687A364EB30 /* ACPAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ACPAppDelegate.m; sourceTree = "<group>"; };
+		E767D1A7F29341BC92AB0108 /* ACPReminderExample-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ACPReminderExample-Prefix.pch"; sourceTree = "<group>"; };
+		F6066A18A73B443DB7CAB485 /* ACPReminderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACPReminderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82679AEDCC5941E1B4DE505B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F02FDC8D1AC44D689F49E07D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71606DE8C8164EF8860FAC5C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22B15AD6A2ED416CAC18F71D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDB9EA4B424D5D85B04E0A /* Images.xcassets */,
+				F38EF6D6B56947F68A80D907 /* Storyboards */,
+				D647F831657046ACAC30CCFB /* Other-Sources */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		28B1EDB4BA524A80B8A46317 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6066A18A73B443DB7CAB485 /* ACPReminderExample.app */,
+				0A44B18288B94C3E9B418AB7 /* UnitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		452F60EA190D1DEA00E4AF83 /* ACPReminder */ = {
+			isa = PBXGroup;
+			children = (
+				452F60EB190D1DFE00E4AF83 /* ACPReminder.h */,
+				452F60EC190D1DFE00E4AF83 /* ACPReminder.m */,
+			);
+			path = ACPReminder;
+			sourceTree = SOURCE_ROOT;
+		};
+		468E7413A5CB4F0485627C38 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		593264B322444F4A81887541 /* ACPReminderExample */ = {
+			isa = PBXGroup;
+			children = (
+				452F60EA190D1DEA00E4AF83 /* ACPReminder */,
+				D8857ECDBED74EAABA597DA6 /* Classes */,
+				22B15AD6A2ED416CAC18F71D /* Resources */,
+			);
+			path = ACPReminderExample;
+			sourceTree = "<group>";
+		};
+		5C67866055F24B648BDD3A4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				139BB708B8C043BDAEEB265A /* UnitTests-Info.plist */,
+				73FA3704AD6A4AC5A3EB7215 /* UnitTests-Prefix.pch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		685295ACD40548A2AD1A3076 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		9E5A09193D574A0BA53F877C = {
+			isa = PBXGroup;
+			children = (
+				452F60F2190D8A9500E4AF83 /* README.md */,
+				593264B322444F4A81887541 /* ACPReminderExample */,
+				D7D09C9CC13046118756AF46 /* UnitTests */,
+				A2F364686E1241DC8BA4C0C8 /* Frameworks */,
+				28B1EDB4BA524A80B8A46317 /* Products */,
+			);
+			indentWidth = 4;
+			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
+		};
+		A2F364686E1241DC8BA4C0C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA08618969E741B4A766D548 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCF63CE6E3344C8892E73DE4 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8031F446373A409E85179DF2 /* ACPAppDelegate.h */,
+				AC5FF7E684B94687A364EB30 /* ACPAppDelegate.m */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		D647F831657046ACAC30CCFB /* Other-Sources */ = {
+			isa = PBXGroup;
+			children = (
+				846D58844E1642968A00C553 /* ACPReminderExample-Info.plist */,
+				E767D1A7F29341BC92AB0108 /* ACPReminderExample-Prefix.pch */,
+				18CE80930C954B929164E252 /* main.m */,
+			);
+			path = "Other-Sources";
+			sourceTree = "<group>";
+		};
+		D7D09C9CC13046118756AF46 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C67866055F24B648BDD3A4E /* Resources */,
+				685295ACD40548A2AD1A3076 /* Tests */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		D8857ECDBED74EAABA597DA6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CCF63CE6E3344C8892E73DE4 /* Delegates */,
+				468E7413A5CB4F0485627C38 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EA08618969E741B4A766D548 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				63373C84E3F34BD48C0D146E /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F38EF6D6B56947F68A80D907 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				452F60E8190D1D5D00E4AF83 /* Storyboard.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A5ECD0F8E744EDDB1F9E75B /* ACPReminderExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB56BF71A1684333A89FAFB0 /* Build configuration list for PBXNativeTarget "ACPReminderExample" */;
+			buildPhases = (
+				FCAA28AF665F4232BD4224E4 /* Sources */,
+				F02FDC8D1AC44D689F49E07D /* Frameworks */,
+				66F4652AD7D44FE4A6C83FD6 /* Resources */,
+				9F2C808964D64D26A7E00F8A /* Warn for TODO and FIXME comments */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ACPReminderExample;
+			productName = ACPReminderExample;
+			productReference = F6066A18A73B443DB7CAB485 /* ACPReminderExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7D905DC37164C88806A214B /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E855DF01413428DBABC8F1E /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				CB3DBD4BE4914EE18683B01A /* Sources */,
+				82679AEDCC5941E1B4DE505B /* Frameworks */,
+				CFA0F259E3864CF89F080E71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D306E0059C4F4857AEBD0E63 /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 0A44B18288B94C3E9B418AB7 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		116C48D9B01E470ABC947349 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ACP;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Uttopia;
+			};
+			buildConfigurationList = 2B68E3CCF33D482B855896DF /* Build configuration list for PBXProject "ACPReminderExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9E5A09193D574A0BA53F877C;
+			productRefGroup = 28B1EDB4BA524A80B8A46317 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A5ECD0F8E744EDDB1F9E75B /* ACPReminderExample */,
+				E7D905DC37164C88806A214B /* UnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66F4652AD7D44FE4A6C83FD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452F60F3190D8A9500E4AF83 /* README.md in Resources */,
+				E01D8B47084342B095C96899 /* Images.xcassets in Resources */,
+				452F60E9190D1D5D00E4AF83 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFA0F259E3864CF89F080E71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F2C808964D64D26A7E00F8A /* Warn for TODO and FIXME comments */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warn for TODO and FIXME comments";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB3DBD4BE4914EE18683B01A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCAA28AF665F4232BD4224E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				997F3EE81505499E9DA5F981 /* ACPAppDelegate.m in Sources */,
+				84B10179F38C470BA11F0B35 /* main.m in Sources */,
+				452F60ED190D1DFE00E4AF83 /* ACPReminder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D306E0059C4F4857AEBD0E63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A5ECD0F8E744EDDB1F9E75B /* ACPReminderExample */;
+			targetProxy = 3A3842D9A98A4F37924ECF6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A3744E49EB741278495FF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ACPReminderExample/Resources/Other-Sources/ACPReminderExample-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "ACPReminderExample/Resources/Other-Sources/ACPReminderExample-Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F33B3740EAE4835B4E50DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ACPReminderExample.app/ACPReminderExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
+				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		3FFDC30787434C3D8C186FEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ACPReminderExample/Resources/Other-Sources/ACPReminderExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "ACPReminderExample/Resources/Other-Sources/ACPReminderExample-Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		44DCB7C352984B049AF16636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ACPReminderExample.app/ACPReminderExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PREFIX_HEADER = "UnitTests/Resources/UnitTests-Prefix.pch";
+				INFOPLIST_FILE = "UnitTests/Resources/UnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		76D21D7D2E614CA99CCDCB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B0841772C5294C0097B31CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E855DF01413428DBABC8F1E /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F33B3740EAE4835B4E50DED /* Release */,
+				44DCB7C352984B049AF16636 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B68E3CCF33D482B855896DF /* Build configuration list for PBXProject "ACPReminderExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76D21D7D2E614CA99CCDCB64 /* Debug */,
+				B0841772C5294C0097B31CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB56BF71A1684333A89FAFB0 /* Build configuration list for PBXNativeTarget "ACPReminderExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A3744E49EB741278495FF3B /* Release */,
+				3FFDC30787434C3D8C186FEE /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 116C48D9B01E470ABC947349 /* Project object */;
+}
