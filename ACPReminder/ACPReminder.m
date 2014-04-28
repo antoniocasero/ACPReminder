@@ -26,7 +26,7 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 
 
 static NSString *const kACPLocalNotificationDomain = @"com.company.remember.myApp";
-static NSString *const kACPLocalNotificationRememberMyApp = @"ACPLocalNotificationRememberMyApp";
+static NSString *const kACPLocalNotificationApp = @"ACPLocalNotificationApp";
 static NSString *const kACPLastNotificationFired = @"ACPLastNotificationFired";
 static NSString *const kACPNotificationMessageIndex = @"ACPNotificationMessageIndex";
 static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodIndex";
@@ -88,7 +88,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
         return;
     }
 
-    [self cancelThisKindOfNotification:kACPLocalNotificationRememberMyApp];
+    [self cancelThisKindOfNotification:kACPLocalNotificationApp];
 
     NSNumber* timePeriodIndex = [self getTimePeriodIndex];
     NSNumber* periodValue = self.timePeriods[(NSUInteger)[timePeriodIndex integerValue]];
@@ -102,15 +102,13 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     localNotification.alertBody = message;
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     localNotification.applicationIconBadgeNumber = 1; // increment
-    
-    //The firs object in the Dictionary is th value of the notification reminder type
-    //The second one is the type of notification. why? because we will work with two different types, the reminder to use the app and the reminder to download a video who is about to expire.
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:timePeriodIndex, kACPNotificationPeriodIndex, kACPLocalNotificationRememberMyApp, kACPLocalNotificationDomain, nil];
+
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:timePeriodIndex, kACPNotificationPeriodIndex, kACPLocalNotificationApp, kACPLocalNotificationDomain, nil];
     localNotification.userInfo = infoDict;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     [[NSUserDefaults standardUserDefaults] setObject:timePeriodIndex forKey:kACPLastNotificationFired];
     [[NSUserDefaults standardUserDefaults] synchronize];
-     ACPLog(@"Local notification for the use of the app scheduled \n Message: %@", message);
+     ACPLog(@"Local notification scheduled \n Message: %@", message);
     
     
     
@@ -159,7 +157,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     
 }
 
-- (void) changeTheTypeOfReminderNotification:(NSInteger)lastNotification {
+- (void)changeNotificationTimePeriod:(NSInteger)lastNotification {
     
     
     NSInteger newNotification;
@@ -191,23 +189,23 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     {
         NSDictionary *userInfoCurrent = oneEvent.userInfo;
         NSString *type=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:kACPLocalNotificationDomain]];
-        if ([type isEqualToString:kACPLocalNotificationRememberMyApp] && [notificationType isEqualToString:kACPLocalNotificationRememberMyApp])
+        if ([type isEqualToString:kACPLocalNotificationApp] && [notificationType isEqualToString:kACPLocalNotificationApp])
         {
             //Cancelling local notification
             [app cancelLocalNotification:oneEvent];
-            ACPLog( @"The local notification has been cancelled");
+            ACPLog( @"Previous local notification has been cancelled");
         }
                 
     }
 }
-- (BOOL) checkIfTheReminderNotificationIsScheduled {
+- (BOOL)checkIfReminderNotificationIsScheduled {
     UIApplication *app = [UIApplication sharedApplication];
     NSArray *eventArray = [app scheduledLocalNotifications];
     for (UILocalNotification * oneEvent in eventArray)
     {
         NSDictionary *userInfoCurrent = oneEvent.userInfo;
         NSString *type=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:kACPLocalNotificationDomain]];
-        if ([type isEqualToString:kACPLocalNotificationRememberMyApp])
+        if ([type isEqualToString:kACPLocalNotificationApp])
         {
             ACPLog( @"The local notification has not been triggered");
             notificationHasBeenFired = NO;
@@ -232,9 +230,9 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     //1-. Check the latest notification scheduled
     NSNumber* localNotificationType = [[NSUserDefaults standardUserDefaults] objectForKey:kACPLastNotificationFired];
     //2-. If is not nil, we have two options, it has been trigger or its already in schedule.
-    if(![self checkIfTheReminderNotificationIsScheduled]){
-        //3-. The notification has been trigger, so we change the type
-        [self changeTheTypeOfReminderNotification:[localNotificationType integerValue]];
+    if(![self checkIfReminderNotificationIsScheduled]){
+        //3-. The notification has been trigger, we need to change the period of time.
+        [self changeNotificationTimePeriod:[localNotificationType integerValue]];
         
     }
 
