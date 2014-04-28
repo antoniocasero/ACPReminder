@@ -54,17 +54,16 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     return sharedManager;
 }
 
-//----------------------------------------------------------------------------------------------------------------
 # pragma mark -
 # pragma mark Life cycle
 # pragma mark -
-//----------------------------------------------------------------------------------------------------------------
+
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        //Messages by default
+        //By default
         self.randomMessage = NO;
         self.testFlagInSeconds = NO;
         self.circularTimePeriod = NO;
@@ -75,44 +74,44 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 
 
 
-//----------------------------------------------------------------------------------------------------------------
+
 # pragma mark -
 # pragma mark Reminder Notification methods
 # pragma mark -
-//----------------------------------------------------------------------------------------------------------------
+
 
 - (void) createLocalNotification {
-
+    
     if(!self.messages) {
         ACPLog(@"WARNING: You dont have any message defined");
         return;
     }
-
+    
     [self cancelThisKindOfNotification:kACPLocalNotificationApp];
-
+    
     NSNumber* timePeriodIndex = [self getTimePeriodIndex];
     NSNumber* periodValue = self.timePeriods[(NSUInteger)[timePeriodIndex integerValue]];
     NSUInteger messageIndex = [self getMessageIndex];
     NSString * message = self.messages[messageIndex];
-
+    
     NSDate *dateToFire = (self.testFlagInSeconds)?[self dateByAddingSeconds:[periodValue integerValue]]:[self dateByAddingDays:[periodValue integerValue]];
-
+    
     UILocalNotification *localNotification = [UILocalNotification new];
     localNotification.fireDate = dateToFire;
     localNotification.alertBody = message;
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     localNotification.applicationIconBadgeNumber = 1; // increment
-
+    
     NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:timePeriodIndex, kACPNotificationPeriodIndex, kACPLocalNotificationApp, kACPLocalNotificationDomain, nil];
     localNotification.userInfo = infoDict;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     [[NSUserDefaults standardUserDefaults] setObject:timePeriodIndex forKey:kACPLastNotificationFired];
     [[NSUserDefaults standardUserDefaults] synchronize];
-     ACPLog(@"Local notification scheduled \n Message: %@", message);
-    
-    
+    ACPLog(@"Local notification scheduled \n Message: %@", message);
     
 }
+
+
 
 - (NSUInteger) getMessageIndex {
     
@@ -166,38 +165,13 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     else
         newNotification= (lastNotification +1 >= (NSInteger)[self.timePeriods count]) ? lastNotification : lastNotification + 1;
     ACPLog(@"Notification time period has changed from %d to %d", lastNotification, newNotification);
-
+    
     [[NSUserDefaults standardUserDefaults] setObject:@(newNotification) forKey:kACPLastNotificationFired];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 
 
-
-
-//----------------------------------------------------------------------------------------------------------------
-# pragma mark -
-# pragma mark Methods to cancel types of notifications
-# pragma mark -
-//----------------------------------------------------------------------------------------------------------------
-
-- (void) cancelThisKindOfNotification:(NSString*)notificationType {
-    
-    UIApplication *app = [UIApplication sharedApplication];
-    NSArray *eventArray = [app scheduledLocalNotifications];
-    for (UILocalNotification * oneEvent in eventArray)
-    {
-        NSDictionary *userInfoCurrent = oneEvent.userInfo;
-        NSString *type=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:kACPLocalNotificationDomain]];
-        if ([type isEqualToString:kACPLocalNotificationApp] && [notificationType isEqualToString:kACPLocalNotificationApp])
-        {
-            //Cancelling local notification
-            [app cancelLocalNotification:oneEvent];
-            ACPLog( @"Previous local notification has been cancelled");
-        }
-                
-    }
-}
 - (BOOL)checkIfReminderNotificationIsScheduled {
     UIApplication *app = [UIApplication sharedApplication];
     NSArray *eventArray = [app scheduledLocalNotifications];
@@ -219,11 +193,11 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 }
 
 
-//----------------------------------------------------------------------------------------------------------------
+
 # pragma mark -
 # pragma mark Check if the notification has been triggered
 # pragma mark -
-//----------------------------------------------------------------------------------------------------------------
+
 
 - (void)checkIfLocalNotificationHasBeenTriggered {
     
@@ -235,8 +209,35 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
         [self changeNotificationTimePeriod:[localNotificationType integerValue]];
         
     }
-
+    
 }
+
+# pragma mark -
+# pragma mark Methods to cancel types of notifications
+# pragma mark -
+
+
+- (void) cancelThisKindOfNotification:(NSString*)notificationType {
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    NSArray *eventArray = [app scheduledLocalNotifications];
+    for (UILocalNotification * oneEvent in eventArray)
+    {
+        NSDictionary *userInfoCurrent = oneEvent.userInfo;
+        NSString *type=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:kACPLocalNotificationDomain]];
+        if ([type isEqualToString:kACPLocalNotificationApp] && [notificationType isEqualToString:kACPLocalNotificationApp])
+        {
+            //Cancelling local notification
+            [app cancelLocalNotification:oneEvent];
+            ACPLog( @"Previous local notification has been cancelled");
+        }
+        
+    }
+}
+
+# pragma mark -
+# pragma mark Date handler methods
+# pragma mark -
 
 - (NSDate *) dateByAddingDays: (NSInteger) dDays
 {
