@@ -1,6 +1,6 @@
 # Purpose
 
-ACPReminder provides automatic local notificacions, in order to marketing your app or explain to user different use cases of your app. It will schedule automatically some predefined messages when the user closes your application, and it will be trigger, some time later, if the user doesn't open the app in that period of time. If the notification has been triggered, then it will take another of your predefined messages and scheduled with the next defined date. If not, it will be reschedule it again.</br>
+ACPReminder provides automatic local notificacions, in order to marketing your app or explain to user different use cases of your app. It will schedule automatically one of your predefined messages when the user closes your application, and it will be trigger, if the user doesn't open the app in that period of time.</br>
 </br></br>
 <p align="center">
 <img src="image.png" width="400px" height="251px" align="center"/>
@@ -11,7 +11,7 @@ ACPReminder provides automatic local notificacions, in order to marketing your a
 </br>
 ### From CocoaPods
 
-	pod `ACPReminder` 
+	pod 'ACPReminder', '~> 1.0.0'
 
 ### From source
 
@@ -68,18 +68,18 @@ This property controls how the messages are selected from the array. If the attr
 
 The array of time periods is sequential, if the attribute is set to YES when the last element is taken, the next one will be the first element. Otherwise it will keep the last element.
 
-
+For more details on this, check the Sample Application in this repo.
 
 </br>
 
-**Remember**, with great power comes great responsibility. You know what I mean... be good.
+**Remember**, with great power comes great responsibility. You know what I mean...
 
 </br>
 
 ## Compatibility
 
 - Supports ARC. 
-- Compatible with iOS5+.
+- Compatible with iOS5, iOS6 and iOS7.
 
 ## Release Notes
 
