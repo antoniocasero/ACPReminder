@@ -2,6 +2,11 @@
 
 ACPReminder provides automatic local notificacions, in order to marketing your app or explain to user different use cases of your app. It will schedule automatically some predefined messages when the user closes your application, and it will be trigger, some time later, if the user doesn't open the app in that period of time. If the notification has been triggered, then it will take another of your predefined messages and scheduled with the next defined date. If not, it will be reschedule it again.</br>
 Easy integration to your project and fully customizable.
+</br></br>
+
+
+
+->![image](image.png =400x251)<-
 
 </br>
 
