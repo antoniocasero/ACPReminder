@@ -1,8 +1,10 @@
 # Purpose
 
 ACPReminder provides automatic local notificacions, in order to marketing your app or explain to user different use cases of your app. It will schedule automatically some predefined messages when the user closes your application, and it will be trigger, some time later, if the user doesn't open the app in that period of time. If the notification has been triggered, then it will take another of your predefined messages and scheduled with the next defined date. If not, it will be reschedule it again.</br>
-Easy integration to your project and fully customizable.
-
+</br></br>
+<p align="center">
+<img src="image.png" width="400px" height="251px" align="center"/>
+</p>
 </br>
 
 ## Installation
@@ -37,7 +39,7 @@ It will schedule your local notification,
 ```
 [localNotifications checkIfLocalNotificationHasBeenTriggered];
 ``` 
- It will check if we have any local notification scheduled, if the notification has not been triggered, it will be reset.
+ It will check if we have any local notification scheduled, if the notification has not been triggered, it will reset it.
  
 ### Configuration
 
@@ -52,19 +54,19 @@ Array of strings, contains the messages that you want to present as local notifi
 ```
 @property (nonatomic, strong) NSArray* timePeriods;
 ```
-Array of time periods between the one local notification presented and the next one.
+Array of time periods, between the local notification presented and the next one.
 
 ```
 @property (nonatomic, assign) BOOL randomMessage;
 ```
 
-This property controls how the messages are selected from the array. If the flag is YES, the message will be selected from the array randomly, if the flag is NO, sequentially (by default).
+This property controls how the messages are selected from the array. If the attribute is YES, the message will be selected from the array randomly, if the flag is NO, sequentially (by default).
 
 ```
 @property (nonatomic, assign) BOOL circularTimePeriod;
 ```
 
-The array of time periods is sequential, if the falg is set to YES when the last element is taken, the next one will be the first element. Otherwise it will keep the last element.
+The array of time periods is sequential, if the attribute is set to YES when the last element is taken, the next one will be the first element. Otherwise it will keep the last element.
 
 
 
