@@ -83,7 +83,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 - (void) createLocalNotification {
     
     if(!self.messages) {
-        ACPLog(@"WARNING: You dont have any message defined");
+        ACPLog(@"WARNING: You dont have any message defined!");
         return;
     }
     
@@ -142,6 +142,11 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 
 - (NSNumber*)getTimePeriodIndex {
     
+    if(!self.messages) {
+        ACPLog(@"WARNING: You dont have any time period defined!");
+        return @(1);
+    }
+    
     NSNumber* periodIndex = [[NSUserDefaults standardUserDefaults] objectForKey:kACPLastNotificationFired];
     if (periodIndex && (NSUInteger)[periodIndex integerValue] < [self.timePeriods count]){
         periodIndex =[[NSUserDefaults standardUserDefaults] objectForKey:kACPLastNotificationFired];
@@ -164,6 +169,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
         newNotification= (lastNotification +1 >= (NSInteger)[self.timePeriods count]) ? 0 : lastNotification + 1;
     else
         newNotification= (lastNotification +1 >= (NSInteger)[self.timePeriods count]) ? lastNotification : lastNotification + 1;
+    
     ACPLog(@"Notification time period has changed from %d to %d", lastNotification, newNotification);
     
     [[NSUserDefaults standardUserDefaults] setObject:@(newNotification) forKey:kACPLastNotificationFired];
