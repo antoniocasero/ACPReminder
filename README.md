@@ -70,7 +70,7 @@ The array of time periods is sequential, if the falg is set to YES when the last
 
 </br>
 
-But remember, with great power comes great responsibility. You know what I mean..
+**Remember**, with great power comes great responsibility. You know what I mean... be good.
 
 </br>
 
