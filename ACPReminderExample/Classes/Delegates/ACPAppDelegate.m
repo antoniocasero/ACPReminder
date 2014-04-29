@@ -26,10 +26,10 @@
     
     ACPReminder * localNotifications = [ACPReminder sharedManager];
     localNotifications.messages = @[@"Example 1", @"Example 2", @"Example 3", @"Example 4", @"Example 5"];
-    localNotifications.timePeriods = @[@(1),@(3),@(5)]; //days
-    localNotifications.randomMessage = NO; //By default is NO
-    localNotifications.testFlagInSeconds = YES; //By default is NO
-    localNotifications.circularTimePeriod = NO;
+    localNotifications.timePeriods = @[@(1),@(10),@(15)]; //days
+    localNotifications.randomMessage = NO; //By default is NO (optional)
+    localNotifications.testFlagInSeconds = YES; //By default is NO (optional)
+    localNotifications.circularTimePeriod = YES; // By default is NO (optional)
     [localNotifications createLocalNotification];
 }
 
