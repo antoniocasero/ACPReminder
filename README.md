@@ -6,7 +6,7 @@ Easy integration to your project and fully customizable.
 
 
 
-->![image](image.png =400x251)<-
+->![image](./image.png =400x251)<-
 
 </br>
 
