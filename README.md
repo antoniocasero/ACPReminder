@@ -6,7 +6,7 @@ Easy integration to your project and fully customizable.
 
 
 
-->![image](./image.png =400x251)<-
+-><img src="image.png" width="400px" height="251px" /><-
 
 </br>
 
