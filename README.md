@@ -1,6 +1,6 @@
 # Purpose
 
-ACPReminder provides automatic local notificacions, in order to marketing your app or explain to user different use cases of your app. It will schedule automatically one of your predefined messages when the user closes your application, and it will be trigger, if the user doesn't open the app in that period of time.</br>
+ACPReminder provides automatic local notificacions, for example, to marketing your app or explain to user different use cases of your app... It will schedule automatically one of your predefined messages when the user closes your application, and it will be trigger, if the user doesn't open the app in that period of time.</br>
 </br></br>
 <p align="center">
 <img src="image.png" width="400px" height="251px" align="center"/>
@@ -29,8 +29,8 @@ You just need to import the class **ACPReminder** in your `appDelegate`
 - In the method `applicationDidEnterBackground:(UIApplication *)application`. 
 
 ```
-ACPReminder * localNotifications = [ACPReminder sharedInstance];
-[local createLocalNotification];
+ACPReminder * localNotifications = [ACPReminder sharedManager];
+[localNotifications createLocalNotification];
 ```
 It will schedule your local notification, 
 
