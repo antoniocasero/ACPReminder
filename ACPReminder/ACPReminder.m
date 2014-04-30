@@ -90,7 +90,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     [self cancelThisKindOfNotification:kACPLocalNotificationApp];
     
     NSNumber* timePeriodIndex = [self getTimePeriodIndex];
-    NSNumber* periodValue = self.timePeriods[(NSUInteger)[timePeriodIndex integerValue]];
+    NSNumber* periodValue = [self getTimePeriodValue:timePeriodIndex];
     NSUInteger messageIndex = [self getMessageIndex];
     NSString * message = self.messages[messageIndex];
     
@@ -142,9 +142,9 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 
 - (NSNumber*)getTimePeriodIndex {
     
-    if(!self.messages) {
+    if(!self.timePeriods) {
         ACPLog(@"WARNING: You dont have any time period defined!");
-        return @(1);
+        return nil;
     }
     
     NSNumber* periodIndex = [[NSUserDefaults standardUserDefaults] objectForKey:kACPLastNotificationFired];
@@ -153,10 +153,23 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     }
     else {
         
-        periodIndex = @([periodIndex integerValue] -1);
+        periodIndex = nil;
     }
     
     return periodIndex;
+    
+    
+}
+
+- (NSNumber*)getTimePeriodValue:(NSUInteger)index {
+    
+    
+    if(!index || index > [self.timePeriods count]) {
+        ACPLog(@"WARNING: You dont have any period of time defined. Returning default value.");
+        return @(1);
+    }
+    
+    return self.timePeriods[index];
     
     
 }
@@ -259,6 +272,16 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 	return newDate;
 }
 
+- (void) setTestFlagInSeconds:(BOOL)testFlagInSeconds {
+
+#if !DEBUG
+    
+    NSLog(@"WARNING: TestFlag attribute is YES");
+    
+#endif
+    
+    _testFlagInSeconds = testFlagInSeconds;
+}
 
 
 @end
