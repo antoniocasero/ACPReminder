@@ -68,6 +68,13 @@ This property controls how the messages are selected from the array. If the attr
 
 The array of time periods is sequential, if the attribute is set to YES when the last element is taken, the next one will be the first element. Otherwise it will keep the last element.
 
+
+```
+@property (nonatomic, strong) NSString* appDomain;
+```
+
+This attribute define the domain of your notifications, prevent collisions between notifications.
+
 For more details on this, check the Sample Application in this repo.
 
 </br>
