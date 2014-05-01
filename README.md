@@ -73,7 +73,8 @@ The array of time periods is sequential, if the attribute is set to YES when the
 @property (nonatomic, strong) NSString* appDomain;
 ```
 
-This attribute define the domain of your notifications, prevent collisions between notifications.
+This attribute define the domain of your notifications, to prevent collisions.
+
 
 For more details on this, check the Sample Application in this repo.
 
