@@ -10,7 +10,9 @@
 *.pbxuser
 *.xccheckout
 *.xcworkspace
+*.xcuserstate
 xcuserdata
+xcuserstate
 !default.xcworkspace
 xcuserdata
 profile
