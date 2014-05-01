@@ -25,7 +25,7 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 
 
 
-static NSString *const kACPLocalNotificationDomain = @"com.company.remember.myApp";
+static NSString *const kACPLocalNotificationDomain = @"com.company.ACPReminder";
 static NSString *const kACPLocalNotificationApp = @"ACPLocalNotificationApp";
 static NSString *const kACPLastNotificationFired = @"ACPLastNotificationFired";
 static NSString *const kACPNotificationMessageIndex = @"ACPNotificationMessageIndex";
@@ -67,6 +67,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
         self.randomMessage = NO;
         self.testFlagInSeconds = NO;
         self.circularTimePeriod = NO;
+        self.appDomain = kACPLocalNotificationDomain;
     }
     
     return self;
@@ -102,7 +103,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     localNotification.applicationIconBadgeNumber = 1; // increment
     
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:timePeriodIndex, kACPNotificationPeriodIndex, kACPLocalNotificationApp, kACPLocalNotificationDomain, nil];
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObjectsAndKeys:timePeriodIndex, kACPNotificationPeriodIndex, kACPLocalNotificationApp, self.appDomain, nil];
     localNotification.userInfo = infoDict;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     [[NSUserDefaults standardUserDefaults] setObject:timePeriodIndex forKey:kACPLastNotificationFired];
@@ -197,7 +198,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     for (UILocalNotification * oneEvent in eventArray)
     {
         NSDictionary *userInfoCurrent = oneEvent.userInfo;
-        NSString *type=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:kACPLocalNotificationDomain]];
+        NSString *type=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:self.appDomain]];
         if ([type isEqualToString:kACPLocalNotificationApp])
         {
             ACPLog( @"The local notification has not been triggered");
@@ -243,7 +244,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     for (UILocalNotification * oneEvent in eventArray)
     {
         NSDictionary *userInfoCurrent = oneEvent.userInfo;
-        NSString *type=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:kACPLocalNotificationDomain]];
+        NSString *type=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:self.appDomain]];
         if ([type isEqualToString:kACPLocalNotificationApp] && [notificationType isEqualToString:kACPLocalNotificationApp])
         {
             //Cancelling local notification

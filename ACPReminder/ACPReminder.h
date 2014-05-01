@@ -38,6 +38,14 @@
  */
 @property (nonatomic, assign) BOOL testFlagInSeconds;
 
+
+/**
+ *  @abstract This attribute define the domain of your notifications, prevent collisions between notifications with other applications using the same library.
+ *
+ *  @discussion If the attribute is nil, it will be set with the default value.
+ */
+@property (nonatomic, strong) NSString* appDomain;
+
 + (instancetype)sharedManager;
 
 /**
