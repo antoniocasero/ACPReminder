@@ -46,12 +46,12 @@ It will schedule your local notification,
 ```
 @property (nonatomic, strong) NSArray* messages;
 ```
-Array of strings, contains the messages that you want to present as local notifications. It's highly recommended to use NSLocalizedString.
+Array of NSString, contains the messages that you want to present as local notifications. It's highly recommended to use NSLocalizedString.
 
 ```
 @property (nonatomic, strong) NSArray* timePeriods;
 ```
-Array of NSNumbers that defined the time periods, between the local notification presented and the next one. By default, the numbers represent days but there is an attribute, only for testing purposes, to convert those days into seconds. (@see sample code).
+Array of NSNumbers, define the time periods between the local notification presented and the next one. By default, the numbers represent days but there is an attribute, only for testing purposes, to convert those days into seconds. (@see sample code).
 
 ```
 @property (nonatomic, assign) BOOL randomMessage;
