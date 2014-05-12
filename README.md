@@ -1,6 +1,6 @@
 # Purpose
 
-ACPReminder provides automatic local notifications, for example, to marketing your app or explain to user different use cases of your app... It will schedule automatically one of your predefined messages when the user closes your application, and it will be trigger, if the user doesn't open the app in that period of time.</br>
+ACPReminder provides automatic local notifications, for example, to marketing your game or explain to user different use cases of your app... It will schedule automatically one of your predefined messages when the user closes your application, and it will be trigger, if the user doesn't open the app in a predefined period of time.</br>
 </br></br>
 <p align="center">
 <img src="image.png" width="400px" height="251px" align="center"/>
@@ -24,7 +24,7 @@ Or just drag ACPReminder(.h.m) to your project.
 </br>
 ## How to use it
 
-You just need to import the class **ACPReminder** in your `appDelegate` 
+You just need to import the class **ACPReminder** in your `appDelegate`. There is two main methods: 
 
 - In the method `applicationDidEnterBackground:(UIApplication *)application`. 
 
@@ -40,21 +40,18 @@ It will schedule your local notification,
 [localNotifications checkIfLocalNotificationHasBeenTriggered];
 ``` 
  It will check if we have any local notification scheduled, if the notification has not been triggered, it will reset it.
- 
-### Configuration
 
-You can define the messages that you want to present to the user, the way to present the messages could be random/sequential, scheduling the time between the messages..
 
-####Properties
+###Properties
 ```
 @property (nonatomic, strong) NSArray* messages;
 ```
-Array of strings, contains the messages that you want to present as local notifications.
+Array of strings, contains the messages that you want to present as local notifications. It's highly recommended to use NSLocalizedString.
 
 ```
 @property (nonatomic, strong) NSArray* timePeriods;
 ```
-Array of time periods, between the local notification presented and the next one.
+Array of NSNumbers that defined the time periods, between the local notification presented and the next one. By default, the numbers represent days but there is an attribute, only for testing purposes, to convert those days into seconds. (@see sample code).
 
 ```
 @property (nonatomic, assign) BOOL randomMessage;
@@ -66,7 +63,7 @@ This property controls how the messages are selected from the array. If the attr
 @property (nonatomic, assign) BOOL circularTimePeriod;
 ```
 
-The array of time periods is sequential, if the attribute is set to YES when the last element is taken, the next one will be the first element. Otherwise it will keep the last element.
+The array of time periods is sequential, if the attribute is set to YES when the last element is taken, the next one will be the first element. Otherwise the next element will be the last one from the array again.
 
 
 ```
@@ -74,6 +71,16 @@ The array of time periods is sequential, if the attribute is set to YES when the
 ```
 
 This attribute define the domain of your notifications, to prevent collisions.
+
+####Example
+
+    ACPReminder * localNotifications = [ACPReminder sharedManager];
+    
+    localNotifications.messages = @[@"Hey - This potion's really odd. Come and See", @"Your Village miss you"", @"Did you know our new features?"]; 
+    localNotifications.timePeriods = @[@(7),@(10)];
+    localNotifications.appDomain = @"com.mydomain.appName";
+
+    [localNotifications createLocalNotification];
 
 
 For more details on this, check the Sample Application in this repo.
