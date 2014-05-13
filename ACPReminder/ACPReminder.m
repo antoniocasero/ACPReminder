@@ -91,7 +91,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     [self cancelThisKindOfNotification:kACPLocalNotificationApp];
     
     NSNumber* timePeriodIndex = [self getTimePeriodIndex];
-    NSNumber* periodValue = [self getTimePeriodValue:timePeriodIndex];
+    NSNumber* periodValue = [self getTimePeriodValue:(NSUInteger)[timePeriodIndex integerValue]];
     NSUInteger messageIndex = [self getMessageIndex];
     NSString * message = self.messages[messageIndex];
     
