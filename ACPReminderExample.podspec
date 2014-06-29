@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'ACPReminder'
-  s.version      = '1.0.0'
+  s.version      = '1.0.1'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage     = 'www.antoniocasero.me'
   s.authors      =  {'Antonio Casero' => 'anto.casero@gmail.com'}
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
 # Source Info
   s.platform     =  :ios, '5.1'
-  s.source       =  {:git => 'https://github.com/antoniocasero/ACPReminder.git', :tag => '1.0.0'}
+  s.source       =  {:git => 'https://github.com/antoniocasero/ACPReminder.git', :tag => '1.0.1'}
   s.source_files = 'ACPReminder/ACPReminder.{h,m}'
 
 

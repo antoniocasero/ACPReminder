@@ -165,7 +165,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 - (NSNumber*)getTimePeriodValue:(NSUInteger)index {
     
     
-    if(!index || index > [self.timePeriods count]) {
+    if(self.timePeriods.count == 0 || index > [self.timePeriods count]) {
         ACPLog(@"WARNING: You dont have any period of time defined. Returning default value.");
         return @(1);
     }
