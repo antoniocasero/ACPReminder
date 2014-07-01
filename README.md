@@ -11,7 +11,7 @@ ACPReminder provides automatic local notifications, for example, to marketing yo
 </br>
 ### From CocoaPods
 
-	pod 'ACPReminder', '~> 1.0.0'
+	pod 'ACPReminder', '~> 1.0.1'
 
 ### From source
 
