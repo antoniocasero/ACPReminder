@@ -17,7 +17,9 @@ ACPReminder provides automatic local notifications, for example, to marketing yo
 
 Clone the repository
 
-[*$ git clone git@github.com:antoniocasero/ACPReminder.git*]()
+```bash
+$ git clone git@github.com:antoniocasero/ACPReminder.git
+```
 
 Or just drag ACPReminder(.h.m) to your project.
 
