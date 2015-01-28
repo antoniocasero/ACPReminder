@@ -21,8 +21,8 @@ lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #error This class requires automatic reference counting
 #endif
 
-#define D_DAY 86400
 
+static NSInteger const kACPDays = 86400;
 
 
 static NSString *const kACPLocalNotificationDomain = @"com.company.ACPReminder";
@@ -64,10 +64,10 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     self = [super init];
     if (self) {
         //By default
-        self.randomMessage = NO;
-        self.testFlagInSeconds = NO;
-        self.circularTimePeriod = NO;
-        self.appDomain = kACPLocalNotificationDomain;
+        _randomMessage = NO;
+        _testFlagInSeconds = NO;
+        _circularTimePeriod = NO;
+        _appDomain = kACPLocalNotificationDomain;
     }
     
     return self;
@@ -91,7 +91,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     [self cancelThisKindOfNotification:kACPLocalNotificationApp];
     
     NSNumber* timePeriodIndex = [self getTimePeriodIndex];
-    NSNumber* periodValue = [self getTimePeriodValue:(NSUInteger)[timePeriodIndex integerValue]];
+    NSNumber* periodValue = [self getTimePeriodValue:[timePeriodIndex unsignedIntegerValue]];
     NSUInteger messageIndex = [self getMessageIndex];
     NSString * message = self.messages[messageIndex];
     
@@ -108,7 +108,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     [[NSUserDefaults standardUserDefaults] setObject:timePeriodIndex forKey:kACPLastNotificationFired];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    ACPLog(@"Local notification scheduled \n Message: %@", message);
+    ACPLog(@"Local notification scheduled \n Message: %@ with delay %zd", message, [periodValue integerValue]);
     
 }
 
@@ -149,21 +149,14 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     }
     
     NSNumber* periodIndex = [[NSUserDefaults standardUserDefaults] objectForKey:kACPLastNotificationFired];
-    if (periodIndex && (NSUInteger)[periodIndex integerValue] < [self.timePeriods count]){
+    if (periodIndex && ([periodIndex unsignedIntegerValue] < [self.timePeriods count])){
         periodIndex =[[NSUserDefaults standardUserDefaults] objectForKey:kACPLastNotificationFired];
-    }
-    else {
-        
-        periodIndex = nil;
     }
     
     return periodIndex;
-    
-    
 }
 
 - (NSNumber*)getTimePeriodValue:(NSUInteger)index {
-    
     
     if(self.timePeriods.count == 0 || index > [self.timePeriods count]) {
         ACPLog(@"WARNING: You dont have any period of time defined. Returning default value.");
@@ -171,20 +164,18 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
     }
     
     return self.timePeriods[index];
-    
-    
 }
 
 - (void)changeNotificationTimePeriod:(NSInteger)lastNotification {
     
-    
     NSInteger newNotification;
-    if(self.circularTimePeriod)
-        newNotification= (lastNotification +1 >= (NSInteger)[self.timePeriods count]) ? 0 : lastNotification + 1;
-    else
-        newNotification= (lastNotification +1 >= (NSInteger)[self.timePeriods count]) ? lastNotification : lastNotification + 1;
-    
-    ACPLog(@"Notification time period has changed from %d to %d", lastNotification, newNotification);
+    if(self.circularTimePeriod){
+        newNotification= (lastNotification+1 >= (NSInteger)[self.timePeriods count]) ? 0 : lastNotification+1;
+    }
+    else{
+        newNotification= (lastNotification+1 >= (NSInteger)[self.timePeriods count]) ? lastNotification : lastNotification+1;
+    }
+    ACPLog(@"Notification time period has changed from %zd to %zd", lastNotification, newNotification);
     
     [[NSUserDefaults standardUserDefaults] setObject:@(newNotification) forKey:kACPLastNotificationFired];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -261,7 +252,7 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 
 - (NSDate *) dateByAddingDays: (NSInteger) dDays
 {
-	NSTimeInterval aTimeInterval = [NSDate timeIntervalSinceReferenceDate] + D_DAY * dDays;
+	NSTimeInterval aTimeInterval = [NSDate timeIntervalSinceReferenceDate] + kACPDays * dDays;
 	NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
 	return newDate;
 }
@@ -274,13 +265,12 @@ static NSString *const kACPNotificationPeriodIndex = @"kACPNotificationPeriodInd
 }
 
 - (void) setTestFlagInSeconds:(BOOL)testFlagInSeconds {
-
+    
 #if !DEBUG
-    
-    NSLog(@"WARNING: TestFlag attribute is YES");
-    
+    if (testFlagInSeconds) {
+        NSLog(@"WARNING: TestFlag attribute is YES");
+    }
 #endif
-    
     _testFlagInSeconds = testFlagInSeconds;
 }
 

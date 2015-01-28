@@ -30,10 +30,10 @@
     
     //Settings
     localNotifications.messages = @[@"Example 1", @"Example 2", @"Example 3", @"Example 4", @"Example 5"];
-    localNotifications.timePeriods = @[@(1),@(10),@(15)]; //days
+    localNotifications.timePeriods = @[@(1),@(4),@(8),@(10)]; //days
     localNotifications.appDomain = @"com.mydomain.appName";
     localNotifications.randomMessage = NO; //By default is NO (optional)
-    localNotifications.testFlagInSeconds = YES; //By default is NO (optional) --> For testing purpose only!
+    localNotifications.testFlagInSeconds = YES; //By default is NO (optional) -->For testing purpose only!
     localNotifications.circularTimePeriod = YES; // By default is NO (optional)
 
     [localNotifications createLocalNotification];
