@@ -11,7 +11,7 @@ ACPReminder provides automatic local notifications, for example, to marketing yo
 </br>
 ### From CocoaPods
 
-	pod 'ACPReminder', '~> 1.0.1'
+	pod 'ACPReminder', '~> 1.0.2'
 
 ### From source
 
@@ -96,9 +96,11 @@ For more details on this, check the Sample Application in this repo.
 ## Compatibility
 
 - Supports ARC. 
-- Compatible with iOS5, iOS6 and iOS7.
+- Compatible with iOS6,iOS7 and iOS8.
 
 ## Release Notes
+
+- v1.0.2 iOS8 compatibility.
 
 - v1.0 Initial release
 
