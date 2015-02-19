@@ -78,7 +78,7 @@ This attribute define the domain of your notifications, to prevent collisions.
 ```objective-c
     ACPReminder * localNotifications = [ACPReminder sharedManager];
     
-    localNotifications.messages = @[@"Hey - This potion's really odd. Come and See", @"Your Village miss you"", @"Did you know our new features?"]; 
+    localNotifications.messages = @[@"Hey - This potion's really odd. Come and See", @"Your Village miss you", @"Did you know our new features?"]; 
     localNotifications.timePeriods = @[@(7),@(10)];
     localNotifications.appDomain = @"com.mydomain.appName";
 
