@@ -7,110 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C46DC08D1D1C105500152F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46DC08C1D1C105500152F17 /* AppDelegate.swift */; };
-		C46DC08F1D1C105500152F17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46DC08E1D1C105500152F17 /* ViewController.swift */; };
-		C46DC0921D1C105500152F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46DC0901D1C105500152F17 /* Main.storyboard */; };
-		C46DC0941D1C105500152F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46DC0931D1C105500152F17 /* Assets.xcassets */; };
-		C46DC0971D1C105500152F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46DC0951D1C105500152F17 /* LaunchScreen.storyboard */; };
-		C46DC0B41D1C110400152F17 /* ACPReminderLib.h in Headers */ = {isa = PBXBuildFile; fileRef = C46DC0B31D1C110400152F17 /* ACPReminderLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C46DC0BB1D1C110600152F17 /* ACPReminderLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46DC0B11D1C110400152F17 /* ACPReminderLib.framework */; };
-		C46DC0C21D1C110600152F17 /* ACPReminderLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46DC0C11D1C110600152F17 /* ACPReminderLibTests.swift */; };
-		C46DC0C61D1C110600152F17 /* ACPReminderLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46DC0B11D1C110400152F17 /* ACPReminderLib.framework */; };
-		C46DC0C71D1C110600152F17 /* ACPReminderLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C46DC0B11D1C110400152F17 /* ACPReminderLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C46DC0D01D1C119B00152F17 /* ACPReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46DC0CF1D1C119B00152F17 /* ACPReminder.swift */; };
-		C46DC0D31D1C11D500152F17 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46DC0D21D1C11D500152F17 /* UserNotifications.framework */; };
+		C45DF2231D21680B00E76D31 /* ACPReminder.h in Headers */ = {isa = PBXBuildFile; fileRef = C45DF21D1D21680B00E76D31 /* ACPReminder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C45DF2241D21680B00E76D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C45DF21E1D21680B00E76D31 /* Assets.xcassets */; };
+		C45DF2271D21680B00E76D31 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C45DF2221D21680B00E76D31 /* Info.plist */; };
+		C45DF2291D21685F00E76D31 /* ACPReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45DF2281D21685F00E76D31 /* ACPReminder.swift */; };
+		C45DF22B1D2169C100E76D31 /* ACPReminderNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45DF22A1D2169C100E76D31 /* ACPReminderNotification.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C46DC0BC1D1C110600152F17 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C46DC0811D1C105500152F17 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C46DC0B01D1C110400152F17;
-			remoteInfo = ACPReminderLib;
-		};
-		C46DC0BE1D1C110600152F17 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C46DC0811D1C105500152F17 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C46DC0881D1C105500152F17;
-			remoteInfo = ACPReminder;
-		};
-		C46DC0C41D1C110600152F17 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C46DC0811D1C105500152F17 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C46DC0B01D1C110400152F17;
-			remoteInfo = ACPReminderLib;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C46DC0CD1D1C110600152F17 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C46DC0C71D1C110600152F17 /* ACPReminderLib.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		C46DC0891D1C105500152F17 /* ACPReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACPReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C46DC08C1D1C105500152F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C46DC08E1D1C105500152F17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C46DC0911D1C105500152F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C46DC0931D1C105500152F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C46DC0961D1C105500152F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C46DC0981D1C105500152F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C46DC0B11D1C110400152F17 /* ACPReminderLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPReminderLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C46DC0B31D1C110400152F17 /* ACPReminderLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPReminderLib.h; sourceTree = "<group>"; };
-		C46DC0B51D1C110400152F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C46DC0BA1D1C110500152F17 /* ACPReminderLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACPReminderLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C46DC0C11D1C110600152F17 /* ACPReminderLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPReminderLibTests.swift; sourceTree = "<group>"; };
-		C46DC0C31D1C110600152F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C46DC0CF1D1C119B00152F17 /* ACPReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminder.swift; sourceTree = "<group>"; };
+		C45DF1FA1D2166D600E76D31 /* ACPReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C45DF21D1D21680B00E76D31 /* ACPReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPReminder.h; sourceTree = "<group>"; };
+		C45DF21E1D21680B00E76D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C45DF2221D21680B00E76D31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C45DF2281D21685F00E76D31 /* ACPReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminder.swift; sourceTree = "<group>"; };
+		C45DF22A1D2169C100E76D31 /* ACPReminderNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminderNotification.swift; sourceTree = "<group>"; };
 		C46DC0D21D1C11D500152F17 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C46DC0861D1C105500152F17 /* Frameworks */ = {
+		C45DF1F61D2166D600E76D31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46DC0C61D1C110600152F17 /* ACPReminderLib.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C46DC0AD1D1C110400152F17 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C46DC0D31D1C11D500152F17 /* UserNotifications.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C46DC0B71D1C110500152F17 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C46DC0BB1D1C110600152F17 /* ACPReminderLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C45DF21C1D21680B00E76D31 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C45DF21F1D21680B00E76D31 /* Core */,
+				C45DF21D1D21680B00E76D31 /* ACPReminder.h */,
+				C45DF21E1D21680B00E76D31 /* Assets.xcassets */,
+				C45DF2221D21680B00E76D31 /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C45DF21F1D21680B00E76D31 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C45DF2281D21685F00E76D31 /* ACPReminder.swift */,
+				C45DF22A1D2169C100E76D31 /* ACPReminderNotification.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		C46DC0801D1C105500152F17 = {
 			isa = PBXGroup;
 			children = (
-				C46DC08B1D1C105500152F17 /* ACPReminder */,
-				C46DC0B21D1C110400152F17 /* ACPReminderLib */,
-				C46DC0C01D1C110600152F17 /* ACPReminderLibTests */,
+				C45DF21C1D21680B00E76D31 /* Source */,
 				C46DC08A1D1C105500152F17 /* Products */,
 				C46DC0D11D1C11D500152F17 /* Frameworks */,
 			);
@@ -119,43 +67,9 @@
 		C46DC08A1D1C105500152F17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C46DC0891D1C105500152F17 /* ACPReminder.app */,
-				C46DC0B11D1C110400152F17 /* ACPReminderLib.framework */,
-				C46DC0BA1D1C110500152F17 /* ACPReminderLibTests.xctest */,
+				C45DF1FA1D2166D600E76D31 /* ACPReminder.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C46DC08B1D1C105500152F17 /* ACPReminder */ = {
-			isa = PBXGroup;
-			children = (
-				C46DC08C1D1C105500152F17 /* AppDelegate.swift */,
-				C46DC08E1D1C105500152F17 /* ViewController.swift */,
-				C46DC0901D1C105500152F17 /* Main.storyboard */,
-				C46DC0931D1C105500152F17 /* Assets.xcassets */,
-				C46DC0951D1C105500152F17 /* LaunchScreen.storyboard */,
-				C46DC0981D1C105500152F17 /* Info.plist */,
-			);
-			path = ACPReminder;
-			sourceTree = "<group>";
-		};
-		C46DC0B21D1C110400152F17 /* ACPReminderLib */ = {
-			isa = PBXGroup;
-			children = (
-				C46DC0B31D1C110400152F17 /* ACPReminderLib.h */,
-				C46DC0B51D1C110400152F17 /* Info.plist */,
-				C46DC0CF1D1C119B00152F17 /* ACPReminder.swift */,
-			);
-			path = ACPReminderLib;
-			sourceTree = "<group>";
-		};
-		C46DC0C01D1C110600152F17 /* ACPReminderLibTests */ = {
-			isa = PBXGroup;
-			children = (
-				C46DC0C11D1C110600152F17 /* ACPReminderLibTests.swift */,
-				C46DC0C31D1C110600152F17 /* Info.plist */,
-			);
-			path = ACPReminderLibTests;
 			sourceTree = "<group>";
 		};
 		C46DC0D11D1C11D500152F17 /* Frameworks */ = {
@@ -169,72 +83,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C46DC0AE1D1C110400152F17 /* Headers */ = {
+		C45DF1F71D2166D600E76D31 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46DC0B41D1C110400152F17 /* ACPReminderLib.h in Headers */,
+				C45DF2231D21680B00E76D31 /* ACPReminder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C46DC0881D1C105500152F17 /* ACPReminder */ = {
+		C45DF1F91D2166D600E76D31 /* ACPReminder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C46DC0A61D1C105600152F17 /* Build configuration list for PBXNativeTarget "ACPReminder" */;
+			buildConfigurationList = C45DF1FF1D2166D600E76D31 /* Build configuration list for PBXNativeTarget "ACPReminder" */;
 			buildPhases = (
-				C46DC0851D1C105500152F17 /* Sources */,
-				C46DC0861D1C105500152F17 /* Frameworks */,
-				C46DC0871D1C105500152F17 /* Resources */,
-				C46DC0CD1D1C110600152F17 /* Embed Frameworks */,
+				C45DF1F51D2166D600E76D31 /* Sources */,
+				C45DF1F61D2166D600E76D31 /* Frameworks */,
+				C45DF1F71D2166D600E76D31 /* Headers */,
+				C45DF1F81D2166D600E76D31 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C46DC0C51D1C110600152F17 /* PBXTargetDependency */,
 			);
 			name = ACPReminder;
 			productName = ACPReminder;
-			productReference = C46DC0891D1C105500152F17 /* ACPReminder.app */;
-			productType = "com.apple.product-type.application";
-		};
-		C46DC0B01D1C110400152F17 /* ACPReminderLib */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C46DC0CC1D1C110600152F17 /* Build configuration list for PBXNativeTarget "ACPReminderLib" */;
-			buildPhases = (
-				C46DC0AC1D1C110300152F17 /* Sources */,
-				C46DC0AD1D1C110400152F17 /* Frameworks */,
-				C46DC0AE1D1C110400152F17 /* Headers */,
-				C46DC0AF1D1C110400152F17 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ACPReminderLib;
-			productName = ACPReminderLib;
-			productReference = C46DC0B11D1C110400152F17 /* ACPReminderLib.framework */;
+			productReference = C45DF1FA1D2166D600E76D31 /* ACPReminder.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		C46DC0B91D1C110500152F17 /* ACPReminderLibTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C46DC0CE1D1C110600152F17 /* Build configuration list for PBXNativeTarget "ACPReminderLibTests" */;
-			buildPhases = (
-				C46DC0B61D1C110500152F17 /* Sources */,
-				C46DC0B71D1C110500152F17 /* Frameworks */,
-				C46DC0B81D1C110500152F17 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C46DC0BD1D1C110600152F17 /* PBXTargetDependency */,
-				C46DC0BF1D1C110600152F17 /* PBXTargetDependency */,
-			);
-			name = ACPReminderLibTests;
-			productName = ACPReminderLibTests;
-			productReference = C46DC0BA1D1C110500152F17 /* ACPReminderLibTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -246,25 +122,12 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Uttopia;
 				TargetAttributes = {
-					C46DC0881D1C105500152F17 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BMF7S4N69R;
-						DevelopmentTeamName = "Antonio Casero (Personal Team)";
-						ProvisioningStyle = Automatic;
-					};
-					C46DC0B01D1C110400152F17 = {
+					C45DF1F91D2166D600E76D31 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BMF7S4N69R;
 						DevelopmentTeamName = "Antonio Casero (Personal Team)";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
-					};
-					C46DC0B91D1C110500152F17 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BMF7S4N69R;
-						DevelopmentTeamName = "Antonio Casero (Personal Team)";
-						ProvisioningStyle = Automatic;
-						TestTargetID = C46DC0881D1C105500152F17;
 					};
 				};
 			};
@@ -281,106 +144,81 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C46DC0881D1C105500152F17 /* ACPReminder */,
-				C46DC0B01D1C110400152F17 /* ACPReminderLib */,
-				C46DC0B91D1C110500152F17 /* ACPReminderLibTests */,
+				C45DF1F91D2166D600E76D31 /* ACPReminder */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C46DC0871D1C105500152F17 /* Resources */ = {
+		C45DF1F81D2166D600E76D31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46DC0971D1C105500152F17 /* LaunchScreen.storyboard in Resources */,
-				C46DC0941D1C105500152F17 /* Assets.xcassets in Resources */,
-				C46DC0921D1C105500152F17 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C46DC0AF1D1C110400152F17 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C46DC0B81D1C110500152F17 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C45DF2271D21680B00E76D31 /* Info.plist in Resources */,
+				C45DF2241D21680B00E76D31 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C46DC0851D1C105500152F17 /* Sources */ = {
+		C45DF1F51D2166D600E76D31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46DC08F1D1C105500152F17 /* ViewController.swift in Sources */,
-				C46DC08D1D1C105500152F17 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C46DC0AC1D1C110300152F17 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C46DC0D01D1C119B00152F17 /* ACPReminder.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C46DC0B61D1C110500152F17 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C46DC0C21D1C110600152F17 /* ACPReminderLibTests.swift in Sources */,
+				C45DF2291D21685F00E76D31 /* ACPReminder.swift in Sources */,
+				C45DF22B1D2169C100E76D31 /* ACPReminderNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C46DC0BD1D1C110600152F17 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C46DC0B01D1C110400152F17 /* ACPReminderLib */;
-			targetProxy = C46DC0BC1D1C110600152F17 /* PBXContainerItemProxy */;
-		};
-		C46DC0BF1D1C110600152F17 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C46DC0881D1C105500152F17 /* ACPReminder */;
-			targetProxy = C46DC0BE1D1C110600152F17 /* PBXContainerItemProxy */;
-		};
-		C46DC0C51D1C110600152F17 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C46DC0B01D1C110400152F17 /* ACPReminderLib */;
-			targetProxy = C46DC0C41D1C110600152F17 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C46DC0901D1C105500152F17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C46DC0911D1C105500152F17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C46DC0951D1C105500152F17 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C46DC0961D1C105500152F17 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		C45DF2001D2166D600E76D31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C45DF2011D2166D600E76D31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C46DC0A41D1C105600152F17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -468,104 +306,17 @@
 			};
 			name = Release;
 		};
-		C46DC0A71D1C105600152F17 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ACPReminder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		C46DC0A81D1C105600152F17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ACPReminder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		C46DC0C81D1C110600152F17 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ACPReminderLib/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminderLib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C46DC0C91D1C110600152F17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ACPReminderLib/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminderLib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C46DC0CA1D1C110600152F17 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ACPReminderLibTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminderLibTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ACPReminder.app/ACPReminder";
-			};
-			name = Debug;
-		};
-		C46DC0CB1D1C110600152F17 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ACPReminderLibTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminderLibTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ACPReminder.app/ACPReminder";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C45DF1FF1D2166D600E76D31 /* Build configuration list for PBXNativeTarget "ACPReminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C45DF2001D2166D600E76D31 /* Debug */,
+				C45DF2011D2166D600E76D31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C46DC0841D1C105500152F17 /* Build configuration list for PBXProject "ACPReminder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -574,31 +325,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		C46DC0A61D1C105600152F17 /* Build configuration list for PBXNativeTarget "ACPReminder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C46DC0A71D1C105600152F17 /* Debug */,
-				C46DC0A81D1C105600152F17 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C46DC0CC1D1C110600152F17 /* Build configuration list for PBXNativeTarget "ACPReminderLib" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C46DC0C81D1C110600152F17 /* Debug */,
-				C46DC0C91D1C110600152F17 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		C46DC0CE1D1C110600152F17 /* Build configuration list for PBXNativeTarget "ACPReminderLibTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C46DC0CA1D1C110600152F17 /* Debug */,
-				C46DC0CB1D1C110600152F17 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
