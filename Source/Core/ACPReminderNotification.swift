@@ -9,12 +9,12 @@
 
 class ACPReminderNotification: NSObject {
 
-    typealias notificationAction = () -> void
-    let notificationTitle : String;
-    let notificationAction : notificationAction
+    typealias notificationActionType = () -> Void
+    let notificationTitle : String
+    let notificationAction : notificationActionType
     
-    init(message: String, action: notificationAction) {
-        notificationTitle = message;
-        notificationAction = action;
+    init(message: String, action: notificationActionType) {
+        self.notificationTitle = message;
+        self.notificationAction = action;
     }
 }
