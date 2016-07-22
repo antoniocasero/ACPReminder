@@ -7,101 +7,144 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C45DF2231D21680B00E76D31 /* ACPReminder.h in Headers */ = {isa = PBXBuildFile; fileRef = C45DF21D1D21680B00E76D31 /* ACPReminder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C45DF2241D21680B00E76D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C45DF21E1D21680B00E76D31 /* Assets.xcassets */; };
-		C45DF2271D21680B00E76D31 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C45DF2221D21680B00E76D31 /* Info.plist */; };
-		C45DF2291D21685F00E76D31 /* ACPReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45DF2281D21685F00E76D31 /* ACPReminder.swift */; };
-		C45DF22B1D2169C100E76D31 /* ACPReminderNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45DF22A1D2169C100E76D31 /* ACPReminderNotification.swift */; };
+		C405A7D41D424DB3006D15A8 /* ACPReminderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C405A7D31D424DB3006D15A8 /* ACPReminderConfiguration.swift */; };
+		C435EC201D423F2700308BD2 /* ACPReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */; };
+		C435EC211D423F2700308BD2 /* ACPReminderNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */; };
+		C435EC291D423F7A00308BD2 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435EC281D423F7A00308BD2 /* UserNotifications.framework */; };
+		C435EC2A1D423FF700308BD2 /* ACPReminderManager.swift in Headers */ = {isa = PBXBuildFile; fileRef = C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		C435EC2B1D423FF700308BD2 /* ACPReminderNotification.swift in Headers */ = {isa = PBXBuildFile; fileRef = C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */; };
+		C4DEC5041D42272E00F6B32E /* ACPReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DEC4F91D42272E00F6B32E /* ACPReminder.framework */; };
+		C4DEC5091D42272E00F6B32E /* ACPReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEC5081D42272E00F6B32E /* ACPReminderTests.swift */; };
+		C4DEC5241D42276700F6B32E /* ACPReminder.h in Headers */ = {isa = PBXBuildFile; fileRef = C4DEC5151D42276700F6B32E /* ACPReminder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4DEC5251D42276700F6B32E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4DEC5161D42276700F6B32E /* Assets.xcassets */; };
+		C4DEC52E1D42276700F6B32E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4DEC5231D42276700F6B32E /* Info.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C4DEC5051D42272E00F6B32E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4DEC4F01D42272E00F6B32E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4DEC4F81D42272E00F6B32E;
+			remoteInfo = ACPReminder;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		C45DF1FA1D2166D600E76D31 /* ACPReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C45DF21D1D21680B00E76D31 /* ACPReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPReminder.h; sourceTree = "<group>"; };
-		C45DF21E1D21680B00E76D31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C45DF2221D21680B00E76D31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C45DF2281D21685F00E76D31 /* ACPReminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminder.swift; sourceTree = "<group>"; };
-		C45DF22A1D2169C100E76D31 /* ACPReminderNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminderNotification.swift; sourceTree = "<group>"; };
-		C46DC0D21D1C11D500152F17 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		C405A7D31D424DB3006D15A8 /* ACPReminderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminderConfiguration.swift; sourceTree = "<group>"; };
+		C435EC281D423F7A00308BD2 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		C4DEC4F91D42272E00F6B32E /* ACPReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4DEC5031D42272E00F6B32E /* ACPReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACPReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4DEC5081D42272E00F6B32E /* ACPReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPReminderTests.swift; sourceTree = "<group>"; };
+		C4DEC50A1D42272E00F6B32E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4DEC5151D42276700F6B32E /* ACPReminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPReminder.h; sourceTree = "<group>"; };
+		C4DEC5161D42276700F6B32E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminderManager.swift; sourceTree = "<group>"; };
+		C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminderNotification.swift; sourceTree = "<group>"; };
+		C4DEC5231D42276700F6B32E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C45DF1F61D2166D600E76D31 /* Frameworks */ = {
+		C4DEC4F51D42272E00F6B32E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C435EC291D423F7A00308BD2 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DEC5001D42272E00F6B32E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4DEC5041D42272E00F6B32E /* ACPReminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C45DF21C1D21680B00E76D31 /* Source */ = {
+		C435EC271D423F7A00308BD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C45DF21F1D21680B00E76D31 /* Core */,
-				C45DF21D1D21680B00E76D31 /* ACPReminder.h */,
-				C45DF21E1D21680B00E76D31 /* Assets.xcassets */,
-				C45DF2221D21680B00E76D31 /* Info.plist */,
+				C435EC281D423F7A00308BD2 /* UserNotifications.framework */,
 			);
-			path = Source;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C45DF21F1D21680B00E76D31 /* Core */ = {
+		C4DEC4EF1D42272E00F6B32E = {
 			isa = PBXGroup;
 			children = (
-				C45DF2281D21685F00E76D31 /* ACPReminder.swift */,
-				C45DF22A1D2169C100E76D31 /* ACPReminderNotification.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		C46DC0801D1C105500152F17 = {
-			isa = PBXGroup;
-			children = (
-				C45DF21C1D21680B00E76D31 /* Source */,
-				C46DC08A1D1C105500152F17 /* Products */,
-				C46DC0D11D1C11D500152F17 /* Frameworks */,
+				C4DEC5141D42276700F6B32E /* Source */,
+				C4DEC5071D42272E00F6B32E /* ACPReminderTests */,
+				C4DEC4FA1D42272E00F6B32E /* Products */,
+				C435EC271D423F7A00308BD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		C46DC08A1D1C105500152F17 /* Products */ = {
+		C4DEC4FA1D42272E00F6B32E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C45DF1FA1D2166D600E76D31 /* ACPReminder.framework */,
+				C4DEC4F91D42272E00F6B32E /* ACPReminder.framework */,
+				C4DEC5031D42272E00F6B32E /* ACPReminderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C46DC0D11D1C11D500152F17 /* Frameworks */ = {
+		C4DEC5071D42272E00F6B32E /* ACPReminderTests */ = {
 			isa = PBXGroup;
 			children = (
-				C46DC0D21D1C11D500152F17 /* UserNotifications.framework */,
+				C4DEC5081D42272E00F6B32E /* ACPReminderTests.swift */,
+				C4DEC50A1D42272E00F6B32E /* Info.plist */,
 			);
-			name = Frameworks;
+			path = ACPReminderTests;
+			sourceTree = "<group>";
+		};
+		C4DEC5141D42276700F6B32E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C4DEC5151D42276700F6B32E /* ACPReminder.h */,
+				C4DEC5161D42276700F6B32E /* Assets.xcassets */,
+				C4DEC5171D42276700F6B32E /* Core */,
+				C4DEC5231D42276700F6B32E /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C4DEC5171D42276700F6B32E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */,
+				C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */,
+				C405A7D31D424DB3006D15A8 /* ACPReminderConfiguration.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C45DF1F71D2166D600E76D31 /* Headers */ = {
+		C4DEC4F61D42272E00F6B32E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C45DF2231D21680B00E76D31 /* ACPReminder.h in Headers */,
+				C4DEC5241D42276700F6B32E /* ACPReminder.h in Headers */,
+				C435EC2A1D423FF700308BD2 /* ACPReminderManager.swift in Headers */,
+				C435EC2B1D423FF700308BD2 /* ACPReminderNotification.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C45DF1F91D2166D600E76D31 /* ACPReminder */ = {
+		C4DEC4F81D42272E00F6B32E /* ACPReminder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C45DF1FF1D2166D600E76D31 /* Build configuration list for PBXNativeTarget "ACPReminder" */;
+			buildConfigurationList = C4DEC50D1D42272E00F6B32E /* Build configuration list for PBXNativeTarget "ACPReminder" */;
 			buildPhases = (
-				C45DF1F51D2166D600E76D31 /* Sources */,
-				C45DF1F61D2166D600E76D31 /* Frameworks */,
-				C45DF1F71D2166D600E76D31 /* Headers */,
-				C45DF1F81D2166D600E76D31 /* Resources */,
+				C4DEC4F41D42272E00F6B32E /* Sources */,
+				C4DEC4F51D42272E00F6B32E /* Frameworks */,
+				C4DEC4F61D42272E00F6B32E /* Headers */,
+				C4DEC4F71D42272E00F6B32E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -109,29 +152,52 @@
 			);
 			name = ACPReminder;
 			productName = ACPReminder;
-			productReference = C45DF1FA1D2166D600E76D31 /* ACPReminder.framework */;
+			productReference = C4DEC4F91D42272E00F6B32E /* ACPReminder.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		C4DEC5021D42272E00F6B32E /* ACPReminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4DEC5101D42272E00F6B32E /* Build configuration list for PBXNativeTarget "ACPReminderTests" */;
+			buildPhases = (
+				C4DEC4FF1D42272E00F6B32E /* Sources */,
+				C4DEC5001D42272E00F6B32E /* Frameworks */,
+				C4DEC5011D42272E00F6B32E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4DEC5061D42272E00F6B32E /* PBXTargetDependency */,
+			);
+			name = ACPReminderTests;
+			productName = ACPReminderTests;
+			productReference = C4DEC5031D42272E00F6B32E /* ACPReminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C46DC0811D1C105500152F17 /* Project object */ = {
+		C4DEC4F01D42272E00F6B32E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Uttopia;
 				TargetAttributes = {
-					C45DF1F91D2166D600E76D31 = {
+					C4DEC4F81D42272E00F6B32E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = BMF7S4N69R;
 						DevelopmentTeamName = "Antonio Casero (Personal Team)";
-						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+					C4DEC5021D42272E00F6B32E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = BMF7S4N69R;
+						DevelopmentTeamName = "Antonio Casero (Personal Team)";
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = C46DC0841D1C105500152F17 /* Build configuration list for PBXProject "ACPReminder" */;
+			buildConfigurationList = C4DEC4F31D42272E00F6B32E /* Build configuration list for PBXProject "ACPReminder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -139,87 +205,67 @@
 				en,
 				Base,
 			);
-			mainGroup = C46DC0801D1C105500152F17;
-			productRefGroup = C46DC08A1D1C105500152F17 /* Products */;
+			mainGroup = C4DEC4EF1D42272E00F6B32E;
+			productRefGroup = C4DEC4FA1D42272E00F6B32E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C45DF1F91D2166D600E76D31 /* ACPReminder */,
+				C4DEC4F81D42272E00F6B32E /* ACPReminder */,
+				C4DEC5021D42272E00F6B32E /* ACPReminderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C45DF1F81D2166D600E76D31 /* Resources */ = {
+		C4DEC4F71D42272E00F6B32E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C45DF2271D21680B00E76D31 /* Info.plist in Resources */,
-				C45DF2241D21680B00E76D31 /* Assets.xcassets in Resources */,
+				C4DEC52E1D42276700F6B32E /* Info.plist in Resources */,
+				C4DEC5251D42276700F6B32E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DEC5011D42272E00F6B32E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C45DF1F51D2166D600E76D31 /* Sources */ = {
+		C4DEC4F41D42272E00F6B32E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C45DF2291D21685F00E76D31 /* ACPReminder.swift in Sources */,
-				C45DF22B1D2169C100E76D31 /* ACPReminderNotification.swift in Sources */,
+				C435EC201D423F2700308BD2 /* ACPReminderManager.swift in Sources */,
+				C435EC211D423F2700308BD2 /* ACPReminderNotification.swift in Sources */,
+				C405A7D41D424DB3006D15A8 /* ACPReminderConfiguration.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DEC4FF1D42272E00F6B32E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4DEC5091D42272E00F6B32E /* ACPReminderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C4DEC5061D42272E00F6B32E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4DEC4F81D42272E00F6B32E /* ACPReminder */;
+			targetProxy = C4DEC5051D42272E00F6B32E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		C45DF2001D2166D600E76D31 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C45DF2011D2166D600E76D31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = acp.ACPReminder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C46DC0A41D1C105600152F17 /* Debug */ = {
+		C4DEC50B1D42272E00F6B32E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -240,6 +286,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -263,10 +310,13 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		C46DC0A51D1C105600152F17 /* Release */ = {
+		C4DEC50C1D42272E00F6B32E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -287,6 +337,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -302,31 +353,100 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4DEC50E1D42272E00F6B32E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ACP.ACPReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C4DEC50F1D42272E00F6B32E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Source/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ACP.ACPReminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C4DEC5111D42272E00F6B32E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ACPReminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ACP.ACPReminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C4DEC5121D42272E00F6B32E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ACPReminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ACP.ACPReminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C45DF1FF1D2166D600E76D31 /* Build configuration list for PBXNativeTarget "ACPReminder" */ = {
+		C4DEC4F31D42272E00F6B32E /* Build configuration list for PBXProject "ACPReminder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C45DF2001D2166D600E76D31 /* Debug */,
-				C45DF2011D2166D600E76D31 /* Release */,
+				C4DEC50B1D42272E00F6B32E /* Debug */,
+				C4DEC50C1D42272E00F6B32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		C46DC0841D1C105500152F17 /* Build configuration list for PBXProject "ACPReminder" */ = {
+		C4DEC50D1D42272E00F6B32E /* Build configuration list for PBXNativeTarget "ACPReminder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C46DC0A41D1C105600152F17 /* Debug */,
-				C46DC0A51D1C105600152F17 /* Release */,
+				C4DEC50E1D42272E00F6B32E /* Debug */,
+				C4DEC50F1D42272E00F6B32E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4DEC5101D42272E00F6B32E /* Build configuration list for PBXNativeTarget "ACPReminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4DEC5111D42272E00F6B32E /* Debug */,
+				C4DEC5121D42272E00F6B32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C46DC0811D1C105500152F17 /* Project object */;
+	rootObject = C4DEC4F01D42272E00F6B32E /* Project object */;
 }

@@ -7,35 +7,39 @@
 //
 import UserNotifications
 
-class ACPReminder {
+public class ACPReminderManager {
     //If the flag is YES, the message will be selected from the array randomly, if NO sequentially
-    var randomMessage : Boolean = false
+    public var randomMessage : Boolean = false
     //The array of time periods is sequential, if the falg is set to YES when the last element is taken, the next one will be the first element.
-    var circularTimePeriod : Boolean = false
+    public var circularTimePeriod : Boolean = false
     // This attribute define the domain of your notifications, prevent collisions between notifications with other applications using the same library.
-    var appDomain : String = ""
+    public var appDomain : String = ""
     //Array of strings, contains the messages that you want to present as local notifications.
-    var messages : [String] = []
+    public var messages : [String] = []
     //Array of time periods between the one local notification presented and the next one.
-    var timePeriods : [Int] = []
+    public var timePeriods : [Int] = []
     //This flag is available only for test purpose, in case you enable it, the time interval from the array timePeriods will be seconds instead of days.
-    var testFlagSeconds : Boolean = false
+    public var testFlagSeconds : Boolean = false
+    //Logs
+    public var verbose : Boolean = true
     
-    static let sharedInstance = ACPReminder()
+    public static let sharedInstance = ACPReminderManager()
+
     
+    private let notificationCenter = UNUserNotificationCenter.current()
     private let center = UNUserNotificationCenter.current()
     private var notifications: [String] = []
     
-    private init() {
+    init() {
 
     }
     
-    internal func createLocalNotification() {
+    public func createLocalNotification() {
         guard messages.count>0 else {
             ACPLog("WARNING: You dont have any message defined!");
             return
         }
-        self.center.removePendingNotificationRequests(withIdentifiers: []);
+        self.center.removeAllPendingNotificationRequests()
         
         let content = UNMutableNotificationContent()
         content.title = "title"
@@ -45,11 +49,10 @@ class ACPReminder {
         let identifier = "time_interval_\(NSDate())"
         notifications.append(identifier)
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        let center = UNUserNotificationCenter.current()
-        center.add(request) { error in
-            print("error: \(error)")
-        }
 
+        center.add(request) { error in
+            ACPLog("error: \(error)")
+        }
     }
 }
 
