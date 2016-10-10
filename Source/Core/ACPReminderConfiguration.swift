@@ -6,7 +6,7 @@
 //  Copyright © 2016 Uttopia. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class ACPReminderConfiguration: NSObject {
 

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let center = UNUserNotificationCenter.current()
         center.delegate = self
-        center.requestAuthorization([.badge, .alert, .sound]) { granted, error in
+        center.requestAuthorization(options: [.badge, .alert, .sound]) { granted, error in
             print("granted: \(granted)")
             print("error: \(error)")
             if granted {
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        manager.messages = ["12121","54545"]
+        manager.messages = [ACPReminderNotification,"54545"]
         manager.testFlagSeconds = true
         
         return true
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 
-        manager.createLocalNotification()
+        manager.schedule(notifcations: <#T##[ACPReminderNotification]#>)()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
