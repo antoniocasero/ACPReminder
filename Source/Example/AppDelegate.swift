@@ -28,10 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 application.registerForRemoteNotifications()
             }
         }
-        
-        manager.messages = [ACPReminderNotification,"54545"]
+
+//        manager.messages = [ACPReminderNotification,"54545"]
         manager.testFlagSeconds = true
-        
+
         return true
     }
 
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 
-        manager.schedule(notifcations: <#T##[ACPReminderNotification]#>)()
+//        manager.schedule(notifcationbs: [ACPReminderNotification])
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -59,13 +59,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     // Called when the application is in foreground
     @available(iOS 10.0, *)
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void) {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         print("center: \(center)\nnotification: \(notification)")
         if let trigger = notification.request.trigger {
             switch trigger {
@@ -86,7 +85,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     // Called when the application is in background
     @available(iOS 10.0, *)
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: () -> Void) {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         print("center: \(center)\nresponse: \(response)")
         completionHandler()
     }

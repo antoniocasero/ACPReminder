@@ -8,27 +8,24 @@
 import UserNotifications
 
 public struct ACPReminderNotification {
-    
-    typealias Completion = ()->()
+
+    typealias Completion = () -> Void
     var title: String
     var message: String
-    var attachment : [URL] = [];
+    var attachment: [URL] = []
     var sound = UNNotificationSound.default()
-    var action :Completion?
-    
-    init(title:String, message:String, attachment:[URL],sound:UNNotificationSound,action: Completion?) {
+    var action: Completion?
+
+    init(title: String, message: String, attachment: [URL], sound: UNNotificationSound, action: Completion? = nil) {
         self.title = title
         self.message = message
         self.attachment = attachment
         self.sound = sound
         self.action = action
     }
-    
-    init(title:String, message:String){
-        self.init(title:title, message:message, attachment:[],sound:UNNotificationSound.default(),action:nil)
+
+    init(title: String, message: String) {
+        self.init(title:title, message:message, attachment:[], sound:UNNotificationSound.default(), action:nil)
     }
-    
+
 }
-
-
-

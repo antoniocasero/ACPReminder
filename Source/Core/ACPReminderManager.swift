@@ -8,41 +8,26 @@
 import UserNotifications
 
 public class ACPReminderManager {
-    //If the flag is YES, the message will be selected from the array randomly, if NO sequentially
-    public var randomMessage : Bool = false
-    //The array of time periods is sequential, if the falg is set to YES when the last element is taken, the next one will be the first element.
-    public var circularTimePeriod : Bool = false
-    // This attribute define the domain of your notifications, prevent collisions between notifications with other applications using the same library.
-    public var appDomain : String = ""
-    //Array of strings, contains the messages that you want to present as local notifications.
-    public var messages : [String] = []
-    //Array of time periods between the one local notification presented and the next one.
-    public var timePeriods : [Int] = []
-    //This flag is available only for test purpose, in case you enable it, the time interval from the array timePeriods will be seconds instead of days.
-    public var testFlagSeconds : Bool = false
-    //Logs
-    public var verbose : Bool = true
-    
-    public static let sharedInstance = ACPReminderManager()
-    
-    
+    public let configuration: ACPReminderConfiguration
+    private let userDefaults = UserDefaults.standard
     private let notificationCenter = UNUserNotificationCenter.current()
     private var notifications: [String] = []
-    
-    init() {}
-    
-    public func schedule(notifcations:[ACPReminderNotification]) {
-        guard messages.count>0 else {
-            ACPLog("WARNING: You dont have any message defined!");
-            return
-        }
-        notificationCenter.removeAllPendingNotificationRequests()
-        let n = notifications.flatMap({$0})
-        
+
+    init(configuration: ACPReminderConfiguration) {
+        self.configuration = configuration
     }
-    
-    
-    func queue(notification:ACPReminderNotification){
+
+    private var lastNotification: Int {
+        get {
+            return userDefaults.integer(forKey: "last")
+        }
+
+        set {
+            return userDefaults.set(lastNotification, forKey: "last")
+        }
+    }
+
+    func queue(notification: ACPReminderNotification) {
         let content = UNMutableNotificationContent()
         content.title = notification.title
         content.body = notification.message
@@ -51,12 +36,12 @@ public class ACPReminderManager {
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let identifier = "time_interval_\(NSDate())"
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
+
         notificationCenter.add(request) { error in
             ACPLog("error: \(error)")
         }
     }
-    
+
 }
 func ACPLog<T>( _ object: @autoclosure() -> T, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
     #if DEBUG
@@ -64,4 +49,32 @@ func ACPLog<T>( _ object: @autoclosure() -> T, _ file: String = #file, _ functio
         let queue = Thread.isMainThread ? "UI" : "BG"
         print("<\(queue)> \(fileURL) \(function)[\(line)]: \(object())")
     #endif
+}
+
+public protocol ACPReminderConfiguration {
+    var debug: Bool { get set }
+    //If the flag is YES, the message will be selected from the array randomly, if NO sequentially
+    var randomMessage: Bool { get set }
+    //The array of time periods is sequential, if the falg is set to YES when the last element is taken, the next one will be the first element.
+    var circularTimePeriod: Bool { get set }
+    // This attribute define the domain of your notifications, prevent collisions between notifications with other applications using the same library.
+    var appDomain: String { get set }
+    //Array of strings, contains the messages that you want to present as local notifications.
+    var messages: [String] { get set }
+    //Array of time periods between the one local notification presented and the next one.
+    var timePeriods: [Int] { get set }
+    //This flag is available only for test purpose, in case you enable it, the time interval from the array timePeriods will be seconds instead of days.
+    var testFlagSeconds: Bool { get set }
+    //Logs
+    var verbose: Bool { get set }
+
+    //Flag to define if we want the notifications to be schedule at the same time, or one by one.
+    var oneByOne: Bool { get set }
+
+}
+
+extension NSDate {
+    class func add(type: Calendar.Component, value: Int) -> Date {
+        return Calendar.current.date(byAdding: type, value: value, to: Date())!
+    }
 }

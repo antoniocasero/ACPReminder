@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C405A7D41D424DB3006D15A8 /* ACPReminderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C405A7D31D424DB3006D15A8 /* ACPReminderConfiguration.swift */; };
 		C435EC201D423F2700308BD2 /* ACPReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */; };
 		C435EC211D423F2700308BD2 /* ACPReminderNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */; };
 		C435EC291D423F7A00308BD2 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435EC281D423F7A00308BD2 /* UserNotifications.framework */; };
@@ -31,7 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C405A7D31D424DB3006D15A8 /* ACPReminderConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACPReminderConfiguration.swift; sourceTree = "<group>"; };
 		C435EC281D423F7A00308BD2 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		C4DEC4F91D42272E00F6B32E /* ACPReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DEC5031D42272E00F6B32E /* ACPReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACPReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +114,6 @@
 			children = (
 				C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */,
 				C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */,
-				C405A7D31D424DB3006D15A8 /* ACPReminderConfiguration.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -145,6 +142,7 @@
 				C4DEC4F51D42272E00F6B32E /* Frameworks */,
 				C4DEC4F61D42272E00F6B32E /* Headers */,
 				C4DEC4F71D42272E00F6B32E /* Resources */,
+				C483BF081E5C92CF0022CC90 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -235,6 +233,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C483BF081E5C92CF0022CC90 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4DEC4F41D42272E00F6B32E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -242,7 +257,6 @@
 			files = (
 				C435EC201D423F2700308BD2 /* ACPReminderManager.swift in Sources */,
 				C435EC211D423F2700308BD2 /* ACPReminderNotification.swift in Sources */,
-				C405A7D41D424DB3006D15A8 /* ACPReminderConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
