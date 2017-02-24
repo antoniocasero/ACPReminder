@@ -16,16 +16,11 @@ public struct ACPReminderNotification {
     var sound = UNNotificationSound.default()
     var action: Completion?
 
-    init(title: String, message: String, attachment: [URL], sound: UNNotificationSound, action: Completion? = nil) {
+    init(title: String, message: String, attachment: [URL] = [], sound: UNNotificationSound = UNNotificationSound.default(), action: Completion? = nil) {
         self.title = title
         self.message = message
         self.attachment = attachment
         self.sound = sound
         self.action = action
     }
-
-    init(title: String, message: String) {
-        self.init(title:title, message:message, attachment:[], sound:UNNotificationSound.default(), action:nil)
-    }
-
 }
