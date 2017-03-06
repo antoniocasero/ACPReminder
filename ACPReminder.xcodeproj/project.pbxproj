@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4213F051E6D4EFA00BF0218 /* Date+Utils.swift in Headers */ = {isa = PBXBuildFile; fileRef = C45BEA4A1E6D494E0053638C /* Date+Utils.swift */; };
 		C435EC201D423F2700308BD2 /* ACPReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */; };
 		C435EC211D423F2700308BD2 /* ACPReminderNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */; };
 		C435EC291D423F7A00308BD2 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435EC281D423F7A00308BD2 /* UserNotifications.framework */; };
 		C435EC2A1D423FF700308BD2 /* ACPReminderManager.swift in Headers */ = {isa = PBXBuildFile; fileRef = C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		C435EC2B1D423FF700308BD2 /* ACPReminderNotification.swift in Headers */ = {isa = PBXBuildFile; fileRef = C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */; };
+		C435EC2B1D423FF700308BD2 /* ACPReminderNotification.swift in Headers */ = {isa = PBXBuildFile; fileRef = C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		C45BEA4B1E6D494E0053638C /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45BEA4A1E6D494E0053638C /* Date+Utils.swift */; };
 		C4DEC5041D42272E00F6B32E /* ACPReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DEC4F91D42272E00F6B32E /* ACPReminder.framework */; };
 		C4DEC5091D42272E00F6B32E /* ACPReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DEC5081D42272E00F6B32E /* ACPReminderTests.swift */; };
 		C4DEC5241D42276700F6B32E /* ACPReminder.h in Headers */ = {isa = PBXBuildFile; fileRef = C4DEC5151D42276700F6B32E /* ACPReminder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		C435EC281D423F7A00308BD2 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		C45BEA4A1E6D494E0053638C /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		C4DEC4F91D42272E00F6B32E /* ACPReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ACPReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DEC5031D42272E00F6B32E /* ACPReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACPReminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DEC5081D42272E00F6B32E /* ACPReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPReminderTests.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 			children = (
 				C4DEC5181D42276700F6B32E /* ACPReminderManager.swift */,
 				C4DEC5191D42276700F6B32E /* ACPReminderNotification.swift */,
+				C45BEA4A1E6D494E0053638C /* Date+Utils.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -128,6 +132,7 @@
 				C4DEC5241D42276700F6B32E /* ACPReminder.h in Headers */,
 				C435EC2A1D423FF700308BD2 /* ACPReminderManager.swift in Headers */,
 				C435EC2B1D423FF700308BD2 /* ACPReminderNotification.swift in Headers */,
+				C4213F051E6D4EFA00BF0218 /* Date+Utils.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C435EC201D423F2700308BD2 /* ACPReminderManager.swift in Sources */,
+				C45BEA4B1E6D494E0053638C /* Date+Utils.swift in Sources */,
 				C435EC211D423F2700308BD2 /* ACPReminderNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

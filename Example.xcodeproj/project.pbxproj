@@ -7,14 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C435EC341D4240D400308BD2 /* ACPReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C435EC331D4240D400308BD2 /* ACPReminder.framework */; };
-		C435EC351D4240D400308BD2 /* ACPReminder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C435EC331D4240D400308BD2 /* ACPReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4213F111E6D507900BF0218 /* ACPReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4213F0C1E6D506A00BF0218 /* ACPReminder.framework */; };
+		C4213F121E6D507900BF0218 /* ACPReminder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4213F0C1E6D506A00BF0218 /* ACPReminder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C45BEA4D1E6D49AE0053638C /* MyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45BEA4C1E6D49AE0053638C /* MyNotifications.swift */; };
 		C4ADBE4A1D225407005DBCF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADBE421D225407005DBCF8 /* AppDelegate.swift */; };
 		C4ADBE4B1D225407005DBCF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4ADBE431D225407005DBCF8 /* Assets.xcassets */; };
 		C4ADBE4C1D225407005DBCF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4ADBE441D225407005DBCF8 /* LaunchScreen.storyboard */; };
 		C4ADBE4D1D225407005DBCF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4ADBE461D225407005DBCF8 /* Main.storyboard */; };
 		C4ADBE4F1D225407005DBCF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADBE491D225407005DBCF8 /* ViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4213F0B1E6D506A00BF0218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4213F061E6D506A00BF0218 /* ACPReminder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4DEC4F91D42272E00F6B32E;
+			remoteInfo = ACPReminder;
+		};
+		C4213F0D1E6D506A00BF0218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4213F061E6D506A00BF0218 /* ACPReminder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4DEC5031D42272E00F6B32E;
+			remoteInfo = ACPReminderTests;
+		};
+		C4213F0F1E6D506F00BF0218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4213F061E6D506A00BF0218 /* ACPReminder.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C4DEC4F81D42272E00F6B32E;
+			remoteInfo = ACPReminder;
+		};
+		C4213F131E6D507900BF0218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4213F061E6D506A00BF0218 /* ACPReminder.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C4DEC4F81D42272E00F6B32E;
+			remoteInfo = ACPReminder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C435EC321D42407C00308BD2 /* Embed Frameworks */ = {
@@ -23,7 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C435EC351D4240D400308BD2 /* ACPReminder.framework in Embed Frameworks */,
+				C4213F121E6D507900BF0218 /* ACPReminder.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,8 +63,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C4213F061E6D506A00BF0218 /* ACPReminder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ACPReminder.xcodeproj; sourceTree = "<group>"; };
 		C435EC241D423F4E00308BD2 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
-		C435EC331D4240D400308BD2 /* ACPReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = ACPReminder.framework; path = "/Users/palmero/Library/Developer/Xcode/DerivedData/ACPReminder-dyjcsyrcnctvffcydtheyakhmzta/Build/Products/Debug-iphonesimulator/ACPReminder.framework"; sourceTree = "<absolute>"; };
+		C45BEA4C1E6D49AE0053638C /* MyNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNotifications.swift; sourceTree = "<group>"; };
 		C4ADBE2C1D2253BC005DBCF8 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4ADBE421D225407005DBCF8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4ADBE431D225407005DBCF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,16 +80,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C435EC341D4240D400308BD2 /* ACPReminder.framework in Frameworks */,
+				C4213F111E6D507900BF0218 /* ACPReminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4213F071E6D506A00BF0218 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4213F0C1E6D506A00BF0218 /* ACPReminder.framework */,
+				C4213F0E1E6D506A00BF0218 /* ACPReminderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C435EC231D423F4E00308BD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4213F061E6D506A00BF0218 /* ACPReminder.xcodeproj */,
 				C435EC241D423F4E00308BD2 /* UserNotifications.framework */,
 			);
 			name = Frameworks;
@@ -65,7 +108,6 @@
 		C4ADBE231D2253BC005DBCF8 = {
 			isa = PBXGroup;
 			children = (
-				C435EC331D4240D400308BD2 /* ACPReminder.framework */,
 				C4ADBE411D225407005DBCF8 /* Example */,
 				C4ADBE2D1D2253BC005DBCF8 /* Products */,
 				C435EC231D423F4E00308BD2 /* Frameworks */,
@@ -89,6 +131,7 @@
 				C4ADBE461D225407005DBCF8 /* Main.storyboard */,
 				C4ADBE481D225407005DBCF8 /* Info.plist */,
 				C4ADBE491D225407005DBCF8 /* ViewController.swift */,
+				C45BEA4C1E6D49AE0053638C /* MyNotifications.swift */,
 			);
 			name = Example;
 			path = Source/Example;
@@ -109,6 +152,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				C4213F101E6D506F00BF0218 /* PBXTargetDependency */,
+				C4213F141E6D507900BF0218 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -144,12 +189,35 @@
 			mainGroup = C4ADBE231D2253BC005DBCF8;
 			productRefGroup = C4ADBE2D1D2253BC005DBCF8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C4213F071E6D506A00BF0218 /* Products */;
+					ProjectRef = C4213F061E6D506A00BF0218 /* ACPReminder.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C4ADBE2B1D2253BC005DBCF8 /* Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C4213F0C1E6D506A00BF0218 /* ACPReminder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ACPReminder.framework;
+			remoteRef = C4213F0B1E6D506A00BF0218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C4213F0E1E6D506A00BF0218 /* ACPReminderTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ACPReminderTests.xctest;
+			remoteRef = C4213F0D1E6D506A00BF0218 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C4ADBE2A1D2253BC005DBCF8 /* Resources */ = {
@@ -170,11 +238,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4ADBE4F1D225407005DBCF8 /* ViewController.swift in Sources */,
+				C45BEA4D1E6D49AE0053638C /* MyNotifications.swift in Sources */,
 				C4ADBE4A1D225407005DBCF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4213F101E6D506F00BF0218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ACPReminder;
+			targetProxy = C4213F0F1E6D506F00BF0218 /* PBXContainerItemProxy */;
+		};
+		C4213F141E6D507900BF0218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ACPReminder;
+			targetProxy = C4213F131E6D507900BF0218 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C4ADBE441D225407005DBCF8 /* LaunchScreen.storyboard */ = {
