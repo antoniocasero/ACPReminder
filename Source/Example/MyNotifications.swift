@@ -16,14 +16,11 @@ struct MyNotifications {
     var configuration: ACPReminderConfiguration
 
     init() {
-        messages = [ACPReminderNotification(title:"1", message:"fsdfds"),
-                        ACPReminderNotification(title:"2", message:"fsdfds"),
+        messages = [ACPReminderNotification(message:"Message"),
+                        ACPReminderNotification(title:"Title", message:"fsdfds"),
                         ACPReminderNotification(title:"3", message:"fsdfds")]
-
         time = [5, 6, 10]
-
         configuration = ACPReminderConfiguration(domain: "my.app.org", messages:messages, timePeriods:time)
-
     }
 
 }

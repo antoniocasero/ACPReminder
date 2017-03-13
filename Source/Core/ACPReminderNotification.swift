@@ -7,7 +7,7 @@
 //
 import UserNotifications
 
-public struct ACPReminderNotification {
+public struct ACPReminderNotification : Equatable {
 
     public typealias Completion = () -> Void
     public var title: String
@@ -16,12 +16,22 @@ public struct ACPReminderNotification {
     public var sound = UNNotificationSound.default()
     public var action: Completion?
 
-    public init(title: String, message: String, attachment: [URL] = [], sound: UNNotificationSound = UNNotificationSound.default(), action: Completion? = nil) {
+    var description: String {
+        return "Notificaton: \n\n" +
+            "Title: \(title)" + "\n" +
+            "Message: \(message)" + "\n"
+    }
+
+    public init(title: String = "", message: String, attachment: [URL] = [], sound: UNNotificationSound = UNNotificationSound.default(), action: Completion? = nil) {
         self.title = title
         self.message = message
         self.attachment = attachment
         self.sound = sound
         self.action = action
+    }
+
+    public static func ==(lhs: ACPReminderNotification, rhs: ACPReminderNotification) -> Bool {
+        return lhs.title == rhs.title && lhs.message == rhs.message
     }
 }
 

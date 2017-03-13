@@ -15,10 +15,6 @@ public class ACPReminderManager {
     }
 
     public let configuration: ACPReminderConfiguration
-    fileprivate var lastNotificationIdentifier: String {
-        get { return userDefaults.string(forKey: "last")! }
-        set { return userDefaults.set(lastNotificationIdentifier, forKey: "last") }
-    }
 
     fileprivate var lastMessageIndex: Int {
         get { return userDefaults.integer(forKey: "lastMessageIndex") }
@@ -44,18 +40,24 @@ public class ACPReminderManager {
             ACPLog("WARNING: You dont have any message defined!")
             return
         }
-
         self.cancelCurrentNotification()
-        let timePeriod = try! self.timePeriod()
+        let timePeriod = self.timePeriod()
         let dateToFire = Date.add(type: .second, value: Int(timePeriod))
         let messageIndex = self.messageIndex()
         let notification = configuration.messages[messageIndex]
         queue(notification: notification, date: dateToFire)
         lastTimePeriodIndex = timePeriod
         lastMessageIndex = messageIndex
+
+        ACPLog("This notification has been fired: \(notification.description) with this period: \(lastTimePeriodIndex)")
+
     }
 
-    public func notifcationHasBeem
+    public func notifcationHasBeenTriggered() {
+        if !self.isTriggered() {
+            self.next(messageIndex: self.lastMessageIndex)
+        }
+    }
 
     fileprivate func queue(notification: ACPReminderNotification, date: Date) {
 
@@ -94,11 +96,11 @@ public class ACPReminderManager {
         return isTriggered
     }
 
-    fileprivate func change(oldNotification: String) {
-        self.notifications.next(item: oldNotification).then {
-            self.lastNotificationIdentifier = $0
+    fileprivate func next(messageIndex: Int) {
+        self.configuration.timePeriods.next(item: messageIndex).then {
+            self.lastMessageIndex = $0
         }
-        ACPLog("Notification time period has changed from \(oldNotification) to \(lastNotificationIdentifier)")
+        ACPLog("Notification time period has changed from \(messageIndex) to \(lastMessageIndex)")
     }
 
     fileprivate func messageIndex() -> Int {
@@ -111,10 +113,10 @@ public class ACPReminderManager {
         }
     }
 
-    fileprivate func timePeriod() throws -> Int {
+    fileprivate func timePeriod() -> Int {
         guard !configuration.timePeriods.isEmpty else {
             ACPLog("WARNING: You dont have any time period defined!")
-            throw ReminderError.noTimePeriodDefined
+            return 0
         }
         var newTimePeriod = self.lastTimePeriodIndex + 1
         newTimePeriod = (newTimePeriod <= self.configuration.timePeriods.count) ? newTimePeriod : 0
