@@ -18,12 +18,12 @@ public class ACPReminderManager {
 
     fileprivate var lastMessageIndex: Int {
         get { return userDefaults.integer(forKey: "lastMessageIndex") }
-        set { return userDefaults.set(lastMessageIndex, forKey: "lastMessageIndex") }
+        set { return userDefaults.set(lastMessageIndex, forKey: #function) }
     }
 
     fileprivate var lastTimePeriodIndex: Int {
         get { return userDefaults.integer(forKey: "lastTimeIndex") }
-        set { return userDefaults.set(lastMessageIndex, forKey: "lastTimeIndex") }
+        set { return userDefaults.set(lastMessageIndex, forKey: #function) }
     }
 
     fileprivate let userDefaults = UserDefaults.standard
@@ -61,14 +61,10 @@ public class ACPReminderManager {
 
     fileprivate func queue(notification: ACPReminderNotification, date: Date) {
 
-        let content = UNMutableNotificationContent()
-        content.title = notification.title
-        content.body = notification.message
-        content.sound = notification.sound
-        content.attachments = []
+        let notification = UNMutableNotificationContent.create(with: notification)
         let trigger = UNCalendarNotificationTrigger(dateMatching: date.components(), repeats: false)
-        let identifier = "\(configuration.appDomain)_time_interval_\(Date())"
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        let identifier = "\(configuration.appDomain)_time_interval_\(Date().timeIntervalSinceNow)"
+        let request = UNNotificationRequest(identifier: identifier, content: notification, trigger: trigger)
 
         notificationCenter.add(request) { error in
             ACPLog("error: \(error)")
@@ -79,9 +75,12 @@ public class ACPReminderManager {
     fileprivate func cancelCurrentNotification() {
         notificationCenter.getPendingNotificationRequests(completionHandler: {
             let pendingNotification = $0.flatMap { $0.identifier }
-                                        .filter { $0.contains("acpreminder_time_interval" )}
+                                        .filter { $0.contains("\(self.configuration.appDomain)_time_interval" )}
             self.notificationCenter.removeDeliveredNotifications(withIdentifiers:pendingNotification)
-            pendingNotification.first.then { self.lastNotificationIdentifier = $0 }
+            pendingNotification.first.then {
+                let index = mess
+                self.lastMessageIndex = self.configuration.messages.index(of: <#T##ACPReminderNotification#>)
+            }
         })
     }
 
@@ -148,5 +147,16 @@ extension Array where Element: Hashable {
             return self[index + 1]
         }
         return nil
+    }
+}
+
+extension UNMutableNotificationContent {
+    class func create(with model: ACPReminderNotification) -> UNMutableNotificationContent {
+        let content = UNMutableNotificationContent()
+        content.title = model.title
+        content.body = model.message
+        content.sound = model.sound
+        content.attachments = []
+        return content
     }
 }
