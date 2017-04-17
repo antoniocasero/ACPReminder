@@ -44,7 +44,7 @@ It will schedule your local notification,
  It will check if we have any local notification scheduled, if the notification has not been triggered, it will reset it.
 
 
-###Properties
+### Properties
 ```objective-c
 @property (nonatomic, strong) NSArray* messages;
 ```
@@ -74,7 +74,7 @@ The array of time periods is sequential, if the attribute is set to YES when the
 
 This attribute define the domain of your notifications, to prevent collisions.
 
-####Example
+#### Example
 ```objective-c
     ACPReminder * localNotifications = [ACPReminder sharedManager];
     
